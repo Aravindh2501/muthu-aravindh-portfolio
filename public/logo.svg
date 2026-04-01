@@ -1,0 +1,19 @@
+<!-- Save as /src/assets/logo-gold-glow.svg -->
+<svg xmlns="http://www.w3.org/2000/svg" width="120" height="120" viewBox="0 0 120 120">
+  <!-- Black background -->
+  <circle cx="60" cy="60" r="60" fill="#000000"/>
+
+  <!-- Outer gold glow -->
+  <filter id="gold-glow" x="-50%" y="-50%" width="200%" height="200%">
+    <feGaussianBlur stdDeviation="6" result="blur"/>
+    <feMerge>
+      <feMergeNode in="blur"/>
+      <feMergeNode in="SourceGraphic"/>
+    </feMerge>
+  </filter>
+
+  <!-- MA letters -->
+  <text x="50%" y="55%" text-anchor="middle" dy=".35em" font-family="Space Grotesk, sans-serif" font-weight="700" font-size="48" fill="#FFD700" filter="url(#gold-glow)">
+    MA
+  </text>
+</svg>

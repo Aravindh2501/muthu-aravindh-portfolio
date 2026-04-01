@@ -8,13 +8,12 @@ import {
   SiReact, SiJavascript, SiTypescript, SiHtml5, SiSass,
   SiTailwindcss, SiNodedotjs, SiNextdotjs, SiGit, SiGithub,
   SiFramer, SiThreedotjs, SiRedux, SiMongodb, SiFirebase,
-  SiVite, SiWebpack, SiAxios, SiExpress, SiBootstrap,
-  SiChakraui, SiEslint, SiPrettier, SiFigma, SiExpo,
-  SiMui, SiBabel, SiDavinciresolve,
+  SiVite, SiAxios, SiExpress, SiBootstrap, SiFigma, SiExpo,
+  SiMui, SiDavinciresolve, SiAdobephotoshop,
 } from 'react-icons/si'
 
-// ── Font Awesome ─────────────────────────────────────────────────────────────
-import { FaCss3Alt } from 'react-icons/fa'
+// ── Font Awesome (Reliable Fallbacks) ────────────────────────────────────────
+import { FaCss3Alt, FaBolt, FaImage } from 'react-icons/fa'
 
 // ── Tabler Icons ─────────────────────────────────────────────────────────────
 import {
@@ -26,13 +25,15 @@ import { SKILLS, SKILL_CATEGORIES } from '../utils/constants'
 
 gsap.registerPlugin(ScrollTrigger)
 
+// Map missing brand icons to reliable FontAwesome alternatives
 const ICON_MAP = {
   SiReact, SiJavascript, SiTypescript, SiHtml5, SiSass,
   SiTailwindcss, SiNodedotjs, SiNextdotjs, SiGit, SiGithub,
   SiFramer, SiThreedotjs, SiRedux, SiMongodb, SiFirebase,
-  SiVite, SiWebpack, SiAxios, SiExpress, SiBootstrap,
-  SiChakraui, SiEslint, SiPrettier, SiFigma, SiExpo,
-  SiMui, SiBabel, SiDavinciresolve,
+  SiVite, SiAxios, SiExpress, SiBootstrap, SiFigma, SiExpo,
+  SiMui, SiDavinciresolve,
+  SiGsap: FaBolt, // Using FontAwesome Bolt for GSAP
+  SiAdobephotoshop: FaImage, // Using FontAwesome Image for Photoshop
   FaCss3Alt,
   TbBrandReactNative, TbTable, TbDiamond, TbLayoutGrid,
   TbInfinity, TbBox, TbCube,
@@ -51,7 +52,6 @@ const CATEGORY_LABELS = {
   Tooling: 'Tooling',
 }
 
-// ── Wave animation keyframes injected once ───────────────────────────────────
 const GLOBAL_STYLES = `
   @keyframes borderSpin {
     0%   { background-position: 0% 50%; }
@@ -63,22 +63,12 @@ const GLOBAL_STYLES = `
     40%  { transform: translateY(-7px); }
     100% { transform: translateY(0px);  }
   }
-  @keyframes tierRise {
-    from { opacity: 0; transform: translateY(48px) scaleX(0.82); }
-    to   { opacity: 1; transform: translateY(0)    scaleX(1);    }
-  }
-  @keyframes pyramidReveal {
-    from { clip-path: polygon(50% 100%, 50% 100%, 50% 100%); opacity: 0; }
-    to   { clip-path: polygon(0% 100%, 100% 100%, 50% 0%);   opacity: 1; }
-  }
 `
 
-// ── SkillCard — pill chip with 3D tilt on hover ──────────────────────────────
 function SkillCard({ name, icon, color, index, waveDelay = 0, animate = false }) {
   const Icon = ICON_MAP[icon] || SiReact
   const cardRef = useRef()
 
-  // GSAP mouse tilt
   useEffect(() => {
     const el = cardRef.current
     if (!el) return
@@ -126,18 +116,16 @@ function SkillCard({ name, icon, color, index, waveDelay = 0, animate = false })
       }}
       style={{
         transformStyle: 'preserve-3d',
-        // wave animation driven by animate prop (triggered on section enter)
         animation: animate
           ? `chipWave 0.55s cubic-bezier(0.34,1.56,0.64,1) ${waveDelay}ms 1`
           : 'none',
       }}
     >
-      {/* Gradient border */}
       <div
         style={{
-          padding: '1px',
+          padding: '1.5px',
           borderRadius: '14px',
-          background: `linear-gradient(135deg, ${color}50, rgba(212,175,55,0.15), ${color}35)`,
+          background: `linear-gradient(135deg, ${color}, rgba(255,255,255,0.4), ${color}80)`,
           backgroundSize: '200% 200%',
           animation: `borderSpin ${4 + (index % 8) * 0.3}s ease infinite`,
         }}
@@ -145,45 +133,42 @@ function SkillCard({ name, icon, color, index, waveDelay = 0, animate = false })
         <div
           className="relative flex items-center gap-2 px-3 py-2 rounded-[13px] group overflow-hidden"
           style={{
-            background: 'rgba(4, 4, 15, 0.9)',
+            background: 'rgba(4, 4, 20, 0.95)',
             backdropFilter: 'blur(14px)',
             cursor: 'none',
-            minWidth: '88px',
+            minWidth: '90px',
             justifyContent: 'center',
           }}
         >
-          {/* Hover glow */}
           <div
-            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 pointer-events-none"
-            style={{ background: `radial-gradient(circle at center, ${color}20, transparent 70%)` }}
+            className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-300 pointer-events-none"
+            style={{ 
+              background: `radial-gradient(circle at center, ${color}60 0%, ${color}20 50%, transparent 80%)`,
+              filter: 'blur(10px)'
+            }}
           />
 
-          {/* Icon */}
           <motion.span
-            whileHover={{ scale: 1.25, rotate: 6 }}
-            transition={{ type: 'spring', stiffness: 320, damping: 14 }}
+            whileHover={{ scale: 1.2, rotate: 5 }}
             className="relative z-10 text-lg flex-shrink-0"
-            style={{ color, filter: `drop-shadow(0 0 6px ${color}70)` }}
+            style={{ color, filter: `drop-shadow(0 0 12px ${color})` }}
           >
             <Icon />
           </motion.span>
 
-          {/* Name */}
           <span
-            className="relative z-10 text-xs font-semibold tracking-wide transition-colors duration-300 group-hover:text-white whitespace-nowrap"
+            className="relative z-10 text-xs font-semibold tracking-wide transition-all duration-300 group-hover:text-white group-hover:drop-shadow-[0_0_8px_rgba(255,255,255,0.6)]"
             style={{
-              color: 'rgba(200,200,220,0.65)',
+              color: 'rgba(200,200,220,0.6)',
               fontFamily: "'Space Grotesk', sans-serif",
-              letterSpacing: '0.05em',
             }}
           >
             {name}
           </span>
 
-          {/* Bottom shimmer */}
           <div
-            className="absolute bottom-0 left-0 right-0 h-px opacity-0 group-hover:opacity-100 transition-opacity duration-500"
-            style={{ background: `linear-gradient(90deg, transparent, ${color}, transparent)` }}
+            className="absolute bottom-0 left-0 right-0 h-[2px] opacity-0 group-hover:opacity-100 transition-opacity duration-500"
+            style={{ background: `linear-gradient(90deg, transparent, white, ${color}, white, transparent)` }}
           />
         </div>
       </div>
@@ -191,9 +176,7 @@ function SkillCard({ name, icon, color, index, waveDelay = 0, animate = false })
   )
 }
 
-// ── PyramidTier — one row of the pyramid ─────────────────────────────────────
 function PyramidTier({ tier, skills, widthPercent, tierIndex, totalTiers, doWave }) {
-  // Pyramid color: top tiers slightly dimmer, base tiers full brightness
   const opacity = 0.55 + (tierIndex / (totalTiers - 1)) * 0.45
 
   return (
@@ -202,13 +185,12 @@ function PyramidTier({ tier, skills, widthPercent, tierIndex, totalTiers, doWave
       whileInView={{ opacity: 1, y: 0, scaleX: 1 }}
       viewport={{ once: true, margin: '-40px' }}
       transition={{
-        delay: (totalTiers - 1 - tierIndex) * 0.1, // bottom tiers animate first
+        delay: (totalTiers - 1 - tierIndex) * 0.1,
         duration: 0.7,
         ease: [0.16, 1, 0.3, 1],
       }}
       style={{ width: '100%', display: 'flex', flexDirection: 'column', alignItems: 'center' }}
     >
-      {/* Tier label */}
       <div
         style={{
           fontFamily: "'Space Grotesk', sans-serif",
@@ -223,7 +205,6 @@ function PyramidTier({ tier, skills, widthPercent, tierIndex, totalTiers, doWave
         {tier.label}
       </div>
 
-      {/* Chips row — width narrows toward top */}
       <div
         style={{
           width: `${widthPercent}%`,
@@ -236,7 +217,6 @@ function PyramidTier({ tier, skills, widthPercent, tierIndex, totalTiers, doWave
           background: `${tier.color}0A`,
           border: `0.5px solid ${tier.color}30`,
           boxSizing: 'border-box',
-          // Subtle left+right trapezoid feel via clip-path
           clipPath: (() => {
             const taper = ((totalTiers - 1 - tierIndex) / (totalTiers - 1)) * 3
             return `polygon(${taper}% 0%, ${100 - taper}% 0%, 100% 100%, 0% 100%)`
@@ -259,7 +239,6 @@ function PyramidTier({ tier, skills, widthPercent, tierIndex, totalTiers, doWave
   )
 }
 
-// ── Main Skills section ───────────────────────────────────────────────────────
 export default function Skills() {
   const sectionRef = useRef()
   const [activeCategory, setActiveCategory] = useState('All')
@@ -268,18 +247,16 @@ export default function Skills() {
 
   const categories = ['All', ...SKILL_CATEGORIES.map(c => c.key)]
 
-  // Group skills by category, sorted largest → smallest (pyramid base at bottom)
   const grouped = SKILL_CATEGORIES.map(cat => ({
     ...cat,
     skills: SKILLS.filter(s => s.category === cat.key),
   })).filter(g => {
     if (activeCategory === 'All') return g.skills.length > 0
     return g.key === activeCategory
-  }).sort((a, b) => b.skills.length - a.skills.length) // largest row at bottom
+  }).sort((a, b) => b.skills.length - a.skills.length)
 
   const maxCount = Math.max(...grouped.map(g => g.skills.length), 1)
 
-  // Trigger wave once on section enter
   useEffect(() => {
     const el = sectionRef.current
     if (!el) return
@@ -299,7 +276,6 @@ export default function Skills() {
     return () => trigger.kill()
   }, [])
 
-  // Re-trigger wave on category change
   const handleCategory = (cat) => {
     setActiveCategory(cat)
     setDoWave(true)
@@ -314,7 +290,6 @@ export default function Skills() {
     <div ref={sectionRef} className="section-padding relative overflow-hidden">
       <style>{GLOBAL_STYLES}</style>
 
-      {/* Ambient orbs */}
       <div
         className="absolute right-0 top-1/3 w-[600px] h-[600px] rounded-full pointer-events-none"
         style={{ background: 'radial-gradient(circle, rgba(255,193,7,0.04), transparent 70%)', filter: 'blur(80px)' }}
@@ -325,8 +300,6 @@ export default function Skills() {
       />
 
       <div className="container-custom relative z-10">
-
-        {/* Section label */}
         <div className="flex items-center gap-4 mb-16">
           <span className="font-mono text-xs tracking-widest uppercase" style={{ color: 'rgba(255,193,7,0.5)' }}>
             02 / Skills
@@ -334,7 +307,6 @@ export default function Skills() {
           <div className="flex-1 h-px" style={{ background: 'linear-gradient(90deg, rgba(255,193,7,0.3), transparent)' }} />
         </div>
 
-        {/* Heading */}
         <div className="flex flex-col items-center text-center mb-14">
           <motion.h2
             initial={{ opacity: 0, y: 30 }}
@@ -373,7 +345,6 @@ export default function Skills() {
           </motion.p>
         </div>
 
-        {/* Category filter pills */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -405,7 +376,6 @@ export default function Skills() {
           })}
         </motion.div>
 
-        {/* ── PYRAMID ──────────────────────────────────────────────────────── */}
         <AnimatePresence mode="wait">
           <motion.div
             key={activeCategory}
@@ -422,7 +392,6 @@ export default function Skills() {
             }}
           >
             {grouped.map((tier, i) => {
-              // Width: base (index 0, largest) = 100%, apex = ~28%
               const widthPercent = activeCategory !== 'All'
                 ? 72
                 : Math.round(28 + ((tier.skills.length / maxCount) * 72))
@@ -442,7 +411,6 @@ export default function Skills() {
           </motion.div>
         </AnimatePresence>
 
-        {/* Pyramid base line */}
         <motion.div
           initial={{ scaleX: 0, opacity: 0 }}
           whileInView={{ scaleX: 1, opacity: 1 }}
@@ -456,7 +424,6 @@ export default function Skills() {
           }}
         />
 
-        {/* Bottom label */}
         <motion.div
           initial={{ opacity: 0, y: 20 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -470,7 +437,6 @@ export default function Skills() {
           </span>
           <div className="h-px w-16" style={{ background: 'rgba(255,193,7,0.2)' }} />
         </motion.div>
-
       </div>
     </div>
   )

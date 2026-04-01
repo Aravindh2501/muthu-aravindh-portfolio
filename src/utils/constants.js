@@ -19,238 +19,54 @@ export const PERSONAL = {
 
 export const SKILLS = [
   // ── Core ─────────────────────────────────────────────────────────────────
-  {
-    name: 'React',
-    icon: 'SiReact',
-    color: '#61DAFB',
-    category: 'Core',
-  },
-  {
-    name: 'Next.js',
-    icon: 'SiNextdotjs',
-    color: '#e8e8f0',
-    category: 'Core',
-  },
-  {
-    name: 'TypeScript',
-    icon: 'SiTypescript',
-    color: '#3178C6',
-    category: 'Core',
-  },
-  {
-    name: 'JavaScript',
-    icon: 'SiJavascript',
-    color: '#F7DF1E',
-    category: 'Core',
-  },
-  {
-    name: 'HTML5',
-    icon: 'SiHtml5',
-    color: '#E34F26',
-    category: 'Core',
-  },
-  {
-    name: 'CSS3',
-    icon: 'FaCss3Alt',
-    color: '#1572B6',
-    category: 'Core',
-  },
-  {
-    name: 'SASS/SCSS',
-    icon: 'SiSass',
-    color: '#CC6699',
-    category: 'Core',
-  },
+  { name: 'React', icon: 'SiReact', color: '#61DAFB', category: 'Core' },
+  { name: 'Next.js', icon: 'SiNextdotjs', color: '#e8e8f0', category: 'Core' },
+  { name: 'TypeScript', icon: 'SiTypescript', color: '#3178C6', category: 'Core' },
+  { name: 'JavaScript', icon: 'SiJavascript', color: '#F7DF1E', category: 'Core' },
+  { name: 'HTML5', icon: 'SiHtml5', color: '#E34F26', category: 'Core' },
+  { name: 'CSS3', icon: 'FaCss3Alt', color: '#1572B6', category: 'Core' },
+  { name: 'SASS/SCSS', icon: 'SiSass', color: '#CC6699', category: 'Core' },
 
   // ── State Management ─────────────────────────────────────────────────────
-  {
-    name: 'Zustand',
-    icon: 'TbCube',
-    color: '#ffc107',
-    category: 'State',
-  },
-  {
-    name: 'Redux',
-    icon: 'SiRedux',
-    color: '#764ABC',
-    category: 'State',
-  },
-  {
-    name: 'TanStack Query',
-    icon: 'TbTable',
-    color: '#FF4154',
-    category: 'State',
-  },
+  { name: 'Zustand', icon: 'TbCube', color: '#ffc107', category: 'State' },
+  { name: 'Redux', icon: 'SiRedux', color: '#764ABC', category: 'State' },
+  { name: 'TanStack Query', icon: 'TbTable', color: '#FF4154', category: 'State' },
 
   // ── UI Libraries ─────────────────────────────────────────────────────────
-  {
-    name: 'Material UI',
-    icon: 'SiMui',
-    color: '#007FFF',
-    category: 'UI',
-  },
-  {
-    name: 'Tailwind CSS',
-    icon: 'SiTailwindcss',
-    color: '#06B6D4',
-    category: 'UI',
-  },
-  {
-    name: 'PrimeReact',
-    icon: 'TbDiamond',
-    color: '#41B883',
-    category: 'UI',
-  },
-  {
-    name: 'Bootstrap 5',
-    icon: 'SiBootstrap',
-    color: '#7952B3',
-    category: 'UI',
-  },
-  {
-    name: 'Chakra UI',
-    icon: 'SiChakraui',
-    color: '#319795',
-    category: 'UI',
-  },
-  {
-    name: 'Framer Motion',
-    icon: 'SiFramer',
-    color: '#e8e8f0',
-    category: 'UI',
-  },
+  { name: 'Material UI', icon: 'SiMui', color: '#007FFF', category: 'UI' },
+  { name: 'Tailwind CSS', icon: 'SiTailwindcss', color: '#06B6D4', category: 'UI' },
+  { name: 'PrimeReact', icon: 'TbDiamond', color: '#41B883', category: 'UI' },
+  { name: 'Bootstrap 5', icon: 'SiBootstrap', color: '#7952B3', category: 'UI' },
+  { name: 'Framer Motion', icon: 'SiFramer', color: '#e8e8f0', category: 'UI' },
+  { name: 'GSAP', icon: 'SiGsap', color: '#88CE02', category: 'UI' },
 
   // ── Data & Tables ────────────────────────────────────────────────────────
-  {
-    name: 'TanStack Table',
-    icon: 'TbLayoutGrid',
-    color: '#FF4154',
-    category: 'Data',
-  },
-  {
-    name: 'Virtual Scroll',
-    icon: 'TbInfinity',
-    color: '#ffc107',
-    category: 'Data',
-  },
+  { name: 'TanStack Table', icon: 'TbLayoutGrid', color: '#FF4154', category: 'Data' },
+  { name: 'Virtual Scroll', icon: 'TbInfinity', color: '#ffc107', category: 'Data' },
 
   // ── Backend / API ────────────────────────────────────────────────────────
-  {
-    name: 'Node.js',
-    icon: 'SiNodedotjs',
-    color: '#339933',
-    category: 'Backend',
-  },
-  {
-    name: 'Express.js',
-    icon: 'SiExpress',
-    color: '#e8e8f0',
-    category: 'Backend',
-  },
-  {
-    name: 'MongoDB',
-    icon: 'SiMongodb',
-    color: '#47A248',
-    category: 'Backend',
-  },
-  {
-    name: 'Firebase',
-    icon: 'SiFirebase',
-    color: '#FFCA28',
-    category: 'Backend',
-  },
-  {
-    name: 'Axios',
-    icon: 'SiAxios',
-    color: '#5A29E4',
-    category: 'Backend',
-  },
+  { name: 'Node.js', icon: 'SiNodedotjs', color: '#339933', category: 'Backend' },
+  { name: 'Express.js', icon: 'SiExpress', color: '#e8e8f0', category: 'Backend' },
+  { name: 'MongoDB', icon: 'SiMongodb', color: '#47A248', category: 'Backend' },
+  { name: 'Firebase', icon: 'SiFirebase', color: '#FFCA28', category: 'Backend' },
+  { name: 'Axios', icon: 'SiAxios', color: '#5A29E4', category: 'Backend' },
 
   // ── Mobile ───────────────────────────────────────────────────────────────
-  {
-    name: 'React Native',
-    icon: 'TbBrandReactNative',
-    color: '#61DAFB',
-    category: 'Mobile',
-  },
-  {
-    name: 'Expo',
-    icon: 'SiExpo',
-    color: '#e8e8f0',
-    category: 'Mobile',
-  },
+  { name: 'React Native', icon: 'TbBrandReactNative', color: '#61DAFB', category: 'Mobile' },
+  { name: 'Expo', icon: 'SiExpo', color: '#e8e8f0', category: 'Mobile' },
 
   // ── 3D / Creative ────────────────────────────────────────────────────────
-  {
-    name: 'Three.js',
-    icon: 'SiThreedotjs',
-    color: '#e8e8f0',
-    category: '3D',
-  },
-  {
-    name: 'WebGL',
-    icon: 'TbBox',
-    color: '#990000',
-    category: '3D',
-  },
-  {
-    name: 'DaVinci Resolve',
-    icon: 'SiDavinciresolve',
-    color: '#FF6B35',
-    category: '3D',
-  },
+  { name: 'Three.js', icon: 'SiThreedotjs', color: '#e8e8f0', category: '3D' },
+  { name: 'DaVinci Resolve', icon: 'SiDavinciresolve', color: '#FF6B35', category: '3D' },
+  { name: 'Adobe Photoshop', icon: 'SiAdobephotoshop', color: '#31A8FF', category: '3D' },
 
   // ── Design ───────────────────────────────────────────────────────────────
-  {
-    name: 'Figma',
-    icon: 'SiFigma',
-    color: '#F24E1E',
-    category: 'Design',
-  },
+  { name: 'Figma', icon: 'SiFigma', color: '#F24E1E', category: 'Design' },
 
   // ── Tooling ──────────────────────────────────────────────────────────────
-  {
-    name: 'Git',
-    icon: 'SiGit',
-    color: '#F05032',
-    category: 'Tooling',
-  },
-  {
-    name: 'GitHub',
-    icon: 'SiGithub',
-    color: '#e8e8f0',
-    category: 'Tooling',
-  },
-  {
-    name: 'Vite',
-    icon: 'SiVite',
-    color: '#646CFF',
-    category: 'Tooling',
-  },
-  {
-    name: 'Webpack',
-    icon: 'SiWebpack',
-    color: '#8DD6F9',
-    category: 'Tooling',
-  },
-  {
-    name: 'Babel',
-    icon: 'SiBabel',
-    color: '#F9DC3E',
-    category: 'Tooling',
-  },
-  {
-    name: 'ESLint',
-    icon: 'SiEslint',
-    color: '#4B32C3',
-    category: 'Tooling',
-  },
-  {
-    name: 'Prettier',
-    icon: 'SiPrettier',
-    color: '#F7B93E',
-    category: 'Tooling',
-  },
+  { name: 'Git', icon: 'SiGit', color: '#F05032', category: 'Tooling' },
+  { name: 'GitHub', icon: 'SiGithub', color: '#e8e8f0', category: 'Tooling' },
+  { name: 'Vite', icon: 'SiVite', color: '#646CFF', category: 'Tooling' },
 ]
 
 // ─── CATEGORY ORDER for display ────────────────────────────────────────────
