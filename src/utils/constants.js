@@ -1,14 +1,15 @@
-// ─── PERSONAL ────────────────────────────────────────────────────────────────
+import resume from "../assets/Muthu_Aravindh_Resume.pdf"
+
 // ─── PERSONAL ────────────────────────────────────────────────────────────────
 export const PERSONAL = {
   name: "Muthu Aravindh",
   firstName: "Muthu",
   lastName: "Aravindh",
 
-  role: "React Frontend Developer",
+  role: "Frontend Developer (React)",
 
   tagline:
-    "Frontend Developer with 3+ years of experience building scalable web applications using React, TypeScript, and modern UI technologies.",
+    "Frontend Developer with 3+ years of experience building scalable and responsive web applications using React, TypeScript, and modern UI technologies.",
 
   location: "Chennai, India",
 
@@ -20,7 +21,7 @@ export const PERSONAL = {
 
   email: "muthuaravindh2512001@gmail.com",
 
-  resume: "/assets/resume.pdf",
+  resume: resume,
 }
 
 // ─── SKILLS ──────────────────────────────────────────────────────────────────
