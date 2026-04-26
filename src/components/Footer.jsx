@@ -2,10 +2,34 @@ import { FiGithub, FiLinkedin, FiMail, FiInstagram, FiArrowUp } from 'react-icon
 import { motion } from 'framer-motion'
 
 const socials = [
-  { icon: FiGithub, href: 'https://github.com/Aravindh2501', label: 'GitHub', color: '#ffffff', speed: '1.2s' },
-  { icon: FiLinkedin, href: 'https://www.linkedin.com/in/aravindh2501/', label: 'LinkedIn', color: '#00f2ff', speed: '0.8s' },
-  { icon: FiMail, href: 'mailto:muthuaravindh2512001@gmail.com', label: 'Email', color: '#ff0033', speed: '1.5s' },
-  { icon: FiInstagram, href: 'https://instagram.com/mad.shot.diary', label: 'Instagram', color: '#ff00ff', speed: '1.1s' },
+  {
+    icon: FiGithub,
+    href: "https://github.com/Aravindh2501",
+    label: "GitHub",
+    color: "#ffffff",
+    speed: "1.2s",
+  },
+  {
+    icon: FiLinkedin,
+    href: "https://www.linkedin.com/in/aravindh2501",
+    label: "LinkedIn",
+    color: "#00f2ff",
+    speed: "0.8s",
+  },
+  {
+    icon: FiMail,
+    href: "mailto:muthuaravindh2512001@gmail.com",
+    label: "Email",
+    color: "#ff0033",
+    speed: "1.5s",
+  },
+  {
+    icon: FiInstagram,
+    href: "https://instagram.com/mad.shot.diary",
+    label: "Instagram",
+    color: "#ff00ff",
+    speed: "1.1s",
+  },
 ]
 
 const SocialIcon = ({ icon: Icon, href, label, color, speed }) => {
@@ -119,7 +143,7 @@ export default function Footer() {
                 MUTHU ARAVINDH
               </h2>
               <p className="font-mono text-[12px] tracking-[0.9em] uppercase text-yellow-500/70 brightness-150">
-                Visual Designer & Senior Frontend Engineer
+               Frontend Developer · React & TypeScript
               </p>
             </div>
           </div>
@@ -136,7 +160,7 @@ export default function Footer() {
             <div className="flex flex-col md:flex-row items-center gap-8 text-[11px] font-mono tracking-[0.5em] text-white/20 uppercase">
               <span>© {new Date().getFullYear()} ALL RIGHTS RESERVED</span>
               <span className="hidden md:block w-1.5 h-1.5 rounded-full bg-yellow-500/30" />
-              <span>EST. 2021 — PORTFOLIO V4.0</span>
+              <span>PORTFOLIO · REACT DEVELOPER</span>
             </div>
           </div>
         </div>

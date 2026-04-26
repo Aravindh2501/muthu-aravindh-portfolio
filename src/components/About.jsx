@@ -10,24 +10,24 @@ gsap.registerPlugin(ScrollTrigger)
 // ── Inline SVG premium icons ──────────────────────────────────────────────────
 const IconBuilding = () => (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-    <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9M15 21V9"/>
+    <rect x="3" y="3" width="18" height="18" rx="2" /><path d="M3 9h18M9 21V9M15 21V9" />
   </svg>
 )
 
 
 const IconPin = () => (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/>
+    <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" /><circle cx="12" cy="9" r="2.5" />
   </svg>
 )
 const IconZap = () => (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2"/>
+    <polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" />
   </svg>
 )
 const IconCamera = () => (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/>
+    <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" /><circle cx="12" cy="13" r="4" />
   </svg>
 )
 
@@ -50,21 +50,21 @@ const IconCode = () => (
 
 const IconStar = () => (
   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="none">
-    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
+    <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2" />
   </svg>
 )
 const IconArrow = () => (
   <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round">
-    <path d="M7 17L17 7M7 7h10v10"/>
+    <path d="M7 17L17 7M7 7h10v10" />
   </svg>
 )
 
 // ── Data ──────────────────────────────────────────────────────────────────────
 const highlights = [
-  { label: 'Company',  value: 'NDE · New Digital Easy', Icon: IconBuilding },
-  { label: 'Role',     value: 'Frontend Developer', Icon: IconCode },
+  { label: 'Company', value: 'NDE · New Digital Easy', Icon: IconBuilding },
+  { label: 'Role', value: 'Frontend Developer', Icon: IconCode },
   { label: 'Location', value: 'Karur, India', Icon: IconPin },
-  { label: 'Focus',    value: 'React · TypeScript · UI Development', Icon: IconZap },
+  { label: 'Focus', value: 'React · TypeScript · UI Development', Icon: IconZap },
 ]
 
 const stats = [
@@ -146,12 +146,12 @@ const STYLES = `
 // ── Component ─────────────────────────────────────────────────────────────────
 export default function About() {
   const sectionRef = useRef(null)
-  const imageRef   = useRef(null)
-  const badgesRef  = useRef(null)
-  const textRef    = useRef(null)
-  const cardsRef   = useRef(null)
-  const statsRef   = useRef(null)
-  const tagsRef    = useRef(null)
+  const imageRef = useRef(null)
+  const badgesRef = useRef(null)
+  const textRef = useRef(null)
+  const cardsRef = useRef(null)
+  const statsRef = useRef(null)
+  const tagsRef = useRef(null)
 
   useEffect(() => {
     const ctx = gsap.context(() => {
@@ -232,13 +232,13 @@ export default function About() {
           width: 500, height: 500, borderRadius: '50%',
           background: 'radial-gradient(circle, rgba(255,193,7,0.05), transparent 70%)',
           filter: 'blur(60px)',
-        }}/>
+        }} />
         <div style={{
           position: 'absolute', bottom: '5%', right: '-5%',
           width: 400, height: 400, borderRadius: '50%',
           background: 'radial-gradient(circle, rgba(97,218,251,0.03), transparent 70%)',
           filter: 'blur(60px)',
-        }}/>
+        }} />
       </div>
 
       <div className="container-custom relative z-10">
@@ -265,7 +265,7 @@ export default function About() {
                 background: 'radial-gradient(circle at 40% 40%, rgba(255,193,7,0.12), transparent 65%)',
                 filter: 'blur(16px)',
                 zIndex: 0,
-              }}/>
+              }} />
 
               {/* Image wrapper */}
               <div
@@ -307,7 +307,7 @@ export default function About() {
                     position: 'absolute', inset: 0,
                     background: 'linear-gradient(to top, rgba(2,2,8,0.55) 0%, transparent 50%)',
                     pointerEvents: 'none',
-                  }}/>
+                  }} />
                 </div>
               </div>
 
@@ -376,7 +376,7 @@ export default function About() {
                       background: '#22c55e',
                       boxShadow: '0 0 8px #22c55e',
                       display: 'inline-block',
-                    }}/>
+                    }} />
                     <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 10, fontWeight: 600, color: 'rgba(34,197,94,0.9)', letterSpacing: '0.08em', textTransform: 'uppercase' }}>Open to work</span>
                   </div>
                 </div>
@@ -448,41 +448,41 @@ export default function About() {
               fontSize: 'clamp(2rem, 3.5vw, 2.8rem)', color: '#e8e8f0',
               lineHeight: 1.15, marginBottom: '1.5rem',
             }}>
-             Frontend Developer 
+              Frontend Developer
               <span style={{
                 background: 'linear-gradient(135deg, #ffd54f, #ffc107, #ff8f00)',
                 WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
               }}>focused on </span>
-             building modern web applications.
+              building modern web applications.
             </h2>
 
             {/* Bio paragraphs */}
-      <div style={{ display: 'flex', flexDirection: 'column', gap: '1.1rem' }}>
+            <div style={{ display: 'flex', flexDirection: 'column', gap: '1.1rem' }}>
 
-<p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.58)' }}>
-  I'm a Frontend Developer currently working at 
-  <span style={{ color: '#ffc107', fontWeight: 600 }}> NDE (New Digital Easy)</span> in Chennai. 
-  I have around 3 years of experience building web applications using modern frontend technologies.
-</p>
+              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.58)' }}>
+                I'm a Frontend Developer currently working at
+                <span style={{ color: '#ffc107', fontWeight: 600 }}> NDE (Now Digital Easy)</span> in Karur.
+                I have around 3 years of experience building web applications using modern frontend technologies.
+              </p>
 
-<p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.58)' }}>
-  My primary stack includes 
-  <span style={{ color: 'rgba(255,193,7,0.85)', fontWeight: 500 }}> React, TypeScript, Zustand, and Material UI</span>. 
-  I work on building user interfaces, dashboards, and application features that focus on usability, maintainability, and performance.
-</p>
+              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.58)' }}>
+                My primary stack includes
+                <span style={{ color: 'rgba(255,193,7,0.85)', fontWeight: 500 }}> React, TypeScript, Zustand, and Material UI</span>.
+                I work on building user interfaces, dashboards, and application features that focus on usability, maintainability, and performance.
+              </p>
 
-<p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.58)' }}>
-  Recently I have been improving my skills in modern frontend architecture, state management, and building scalable applications using tools like TanStack Query and modern React patterns.
-</p>
+              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.58)' }}>
+                Recently I have been improving my skills in modern frontend architecture, state management, and building scalable applications using tools like TanStack Query and modern React patterns.
+              </p>
 
-<p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.58)' }}>
-  Outside of work, I also enjoy photography through my project 
-  <span style={{ color: 'rgba(97,218,251,0.85)', fontWeight: 500 }}> mad.shot.diary</span>, 
-  which helps me develop a strong eye for visual design and creativity.
-</p>
+              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.58)' }}>
+                Outside of work, I also enjoy photography through my project
+                <span style={{ color: 'rgba(97,218,251,0.85)', fontWeight: 500 }}> mad.shot.diary</span>,
+                which helps me develop a strong eye for visual design and creativity.
+              </p>
 
-</div>
+            </div>
 
             {/* Tech tags */}
             <div ref={tagsRef} style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: '1.8rem' }}>
@@ -507,31 +507,31 @@ export default function About() {
                 onMouseEnter={e => e.currentTarget.style.color = '#ffc107'}
                 onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,193,7,0.7)'}
               >
-               muthuaravindh2512001@gmail.com
+                muthuaravindh2512001@gmail.com
               </a>
 
               <span style={{ width: 1, height: 16, background: 'rgba(255,193,7,0.2)' }} />
 
               <a
                 href={resume}
-  download="Muthu_Aravindh_Resume.pdf"
-  data-cursor-hover
-  style={{
-    display: 'inline-flex', alignItems: 'center', gap: 7,
-    padding: '9px 20px', borderRadius: '999px',
-    background: 'linear-gradient(135deg, #ffc107, #ff8f00)',
-    fontFamily: "'Space Grotesk', sans-serif",
-    fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.08em',
-    color: '#020208', cursor: 'none', textDecoration: 'none',
-    boxShadow: '0 0 20px rgba(255,193,7,0.25)',
-    transition: 'box-shadow 0.3s, transform 0.2s',
-    textTransform: 'uppercase',
-  }}
-  onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 0 32px rgba(255,193,7,0.45)'; e.currentTarget.style.transform = 'scale(1.04)' }}
-  onMouseLeave={e => { e.currentTarget.style.boxShadow = '0 0 20px rgba(255,193,7,0.25)'; e.currentTarget.style.transform = 'scale(1)' }}
->
-  <IconArrow /> Resume
-</a>
+                download="Muthu_Aravindh_Resume.pdf"
+                data-cursor-hover
+                style={{
+                  display: 'inline-flex', alignItems: 'center', gap: 7,
+                  padding: '9px 20px', borderRadius: '999px',
+                  background: 'linear-gradient(135deg, #ffc107, #ff8f00)',
+                  fontFamily: "'Space Grotesk', sans-serif",
+                  fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.08em',
+                  color: '#020208', cursor: 'none', textDecoration: 'none',
+                  boxShadow: '0 0 20px rgba(255,193,7,0.25)',
+                  transition: 'box-shadow 0.3s, transform 0.2s',
+                  textTransform: 'uppercase',
+                }}
+                onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 0 32px rgba(255,193,7,0.45)'; e.currentTarget.style.transform = 'scale(1.04)' }}
+                onMouseLeave={e => { e.currentTarget.style.boxShadow = '0 0 20px rgba(255,193,7,0.25)'; e.currentTarget.style.transform = 'scale(1)' }}
+              >
+                <IconArrow /> Resume
+              </a>
 
               <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '0.78rem', color: 'rgba(255,255,255,0.28)', letterSpacing: '0.05em' }}>
                 Chennai, India

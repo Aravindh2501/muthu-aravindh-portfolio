@@ -183,7 +183,7 @@ export default function Contact() {
                   </div>
                   <div className="text-left">
                     <p className="text-[10px] uppercase tracking-widest text-white/30 font-mono">Mobile</p>
-                    <p className="text-sm font-medium">+91 93425 57762</p>
+                    <p className="text-sm font-medium">+91 6369xxxx72</p>
                   </div>
                 </button>
 
