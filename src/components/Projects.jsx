@@ -7,70 +7,105 @@ gsap.registerPlugin(ScrollTrigger)
 
 const projects = [
   {
-    title: 'NDE Drive Ecosystem',
-    description: 'Enterprise file management system architected with MUI to handle lakhs of data records without performance degradation. Leverages React Window for virtualization and Atlassian’s Pragmatic DnD for zero-lag file operations. Features aggressive memoization and flat-index tracking to ensure a smooth, native-like explorer experience even with massive file pools.',
-    tech: ['React', 'MUI', 'Pragmatic DnD (Atlassian)', 'React Window', 'Zustand'],
+    title: 'NDE Drive File Management System',
+    description:
+      'A file management interface similar to Google Drive built using React. Supports nested folder structures, file organization, and drag-and-drop operations for managing files efficiently.',
+
+    tech: ['React', 'Material UI', 'Pragmatic DnD (Atlassian)', 'React Window', 'Zustand'],
+
     gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
     accent: '#667eea',
-    github: null, 
-    live: '#',
-    featured: true,
-    label: 'Production · Enterprise',
-  },
-  {
-    title: 'NDE CRM & Kanban Pipeline',
-    description: 'A high-scale CRM featuring a Kanban board and data grid capable of rendering lakhs of deals seamlessly. Built with MUI and TanStack Table, implementing column pinning and infinite scroll columns. Optimized with code splitting and lazy loading to maintain 60fps performance during complex drag-and-drop transitions in high-density data environments.',
-    tech: ['React', 'MUI', 'Pragmatic DnD', 'TanStack Table', 'TanStack Query', 'Zustand'],
-    gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
-    accent: '#43e97b',
+
     github: null,
     live: '#',
+
+    featured: true,
+    label: 'Production · Internal Tool',
+  },
+
+  {
+    title: 'CRM Dashboard & Kanban Pipeline',
+    description:
+      'CRM dashboard built with React and Material UI featuring Kanban-style workflow management and data tables for managing leads and deals.',
+
+    tech: ['React', 'Material UI', 'TanStack Table', 'TanStack Query', 'Zustand'],
+
+    gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
+    accent: '#43e97b',
+
+    github: null,
+    live: '#',
+
     featured: true,
     label: 'Production · CRM',
   },
+
   {
     title: 'Smart Expense Manager',
-    description: 'A high-performance financial tracking mobile app built with React Native and TypeScript. Architected with SQLite for robust offline-first data persistence and immediate UI response. Features automated transaction categorization through structured logic, comprehensive budget analytics, and high-framerate Reanimated transitions.',
-    tech: ['React Native', 'TypeScript', 'SQLite', 'Zustand', 'Expo SDK'],
+    description:
+      'A mobile expense tracking application built to learn React Native. Allows users to track daily expenses and categorize transactions.',
+
+    tech: ['React Native', 'TypeScript', 'SQLite', 'Expo'],
+
     gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
     accent: '#f093fb',
+
     github: 'https://github.com/Aravindh2501',
     live: 'https://expo.dev/accounts/aravindh_2501/projects/MyApp/builds/6123254d-35a0-468d-8b7c-e85717ca5d1d',
+
     featured: true,
-    label: 'Mobile · FinTech',
+    label: 'Mobile Project',
   },
+
   {
-    title: 'Logistic Edge Dashboard',
-    description: 'A premium, production-ready logistics template designed for scalability. Features a sophisticated MUI multi-theme system, comprehensive file management module, and real-time chat UI. Built with a focus on reusable component architecture and professional-grade UX/UI for enterprise commercialization.',
-    tech: ['React', 'MUI', 'Framer Motion', 'Zustand', 'Vite'],
+    title: 'Logistics Dashboard Template',
+    description:
+      'A dashboard template built using React and Material UI with reusable components and modern UI design patterns.',
+
+    tech: ['React', 'Material UI', 'Framer Motion', 'Zustand', 'Vite'],
+
     gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
     accent: '#fa709a',
+
     github: 'https://github.com/Aravindh2501',
     live: 'https://logisticsdashboard.vercel.app/',
+
     featured: false,
-    label: 'Web App · Template',
+    label: 'Web App Template',
   },
+
   {
-    title: 'Enterprise HRMS Portal',
-    description: 'Full-scale Human Resource Management System managing payroll, automated invoicing, and employee lifecycles. Implements a complex check-in/out attendance logic and holiday management using Redux and MUI for a unified, stable enterprise dashboard.',
-    tech: ['React', 'Redux', 'MUI', 'Node.js', 'Chart.js'],
+    title: 'HRMS Portal',
+    description:
+      'Human Resource Management System for managing employee attendance, payroll information, and internal communication tools.',
+
+    tech: ['React', 'Redux', 'Material UI', 'Node.js', 'Chart.js'],
+
     gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
     accent: '#4facfe',
+
     github: null,
     live: '#',
+
     featured: false,
     label: 'Production · HRMS',
   },
+
   {
-    title: 'Spin Wheel Pro',
-    description: 'A performance-driven interactive tool engineered for high-engagement giveaways. Features a robust data ingestion layer supporting JSON, XLSX, and CSV uploads for lakhs of entries, paired with a React/Tailwind-based UI and custom animation engine for seamless winner selection.',
-    tech: ['React', 'Tailwind CSS', 'XLSX Parser', 'HTML5 Canvas', 'Netlify'],
+    title: 'Spin Wheel Giveaway Tool',
+    description:
+      'A simple interactive spin wheel tool used for giveaways. Supports importing participant data from files and selecting random winners.',
+
+    tech: ['React', 'Tailwind CSS', 'XLSX Parser', 'HTML5 Canvas'],
+
     gradient: 'linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)',
     accent: '#a18cd1',
+
     github: 'https://github.com/Aravindh2501',
     live: 'https://madshot-studio.netlify.app',
+
     featured: false,
-    label: 'Tool · Deployed',
+    label: 'Web Tool',
   }
 ]
 
@@ -217,7 +252,7 @@ function ProjectCard({ project, index }) {
               Live Demo
             </a>
           )}
-          <a
+           {/* <a
             href={project.github}
             target="_blank"
             rel="noopener noreferrer"
@@ -234,7 +269,7 @@ function ProjectCard({ project, index }) {
           >
             <FiGithub size={13} />
             GitHub
-          </a>
+          </a> */}
         </div>
       </div>
     </div>

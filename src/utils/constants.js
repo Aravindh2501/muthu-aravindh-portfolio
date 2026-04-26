@@ -1,16 +1,26 @@
 // ─── PERSONAL ────────────────────────────────────────────────────────────────
+// ─── PERSONAL ────────────────────────────────────────────────────────────────
 export const PERSONAL = {
-  name: 'Muthu Aravindh',
-  firstName: 'Muthu',
-  lastName: 'Aravindh',
-  role: 'React Developer',
-  tagline: 'I craft immersive, high-performance web experiences with React and TypeScript — from complex data systems to cinematic UI.',
-  location: 'Chennai, India',
+  name: "Muthu Aravindh",
+  firstName: "Muthu",
+  lastName: "Aravindh",
+
+  role: "React Frontend Developer",
+
+  tagline:
+    "Frontend Developer with 3+ years of experience building scalable web applications using React, TypeScript, and modern UI technologies.",
+
+  location: "Chennai, India",
+
   available: true,
-  github: 'https://github.com/muthu-aravindh',
-  linkedin: 'https://linkedin.com/in/muthu-aravindh',
-  email: 'muthuaravindh@example.com',
-  resume: '/resume.pdf',
+
+  github: "https://github.com/muthu-aravindh",
+
+  linkedin: "https://linkedin.com/in/muthu-aravindh",
+
+  email: "muthuaravindh2512001@gmail.com",
+
+  resume: "/assets/resume.pdf",
 }
 
 // ─── SKILLS ──────────────────────────────────────────────────────────────────
@@ -18,52 +28,43 @@ export const PERSONAL = {
 // color = brand hex for glow / icon tint
 
 export const SKILLS = [
-  // ── Core ─────────────────────────────────────────────────────────────────
+  // ── Core ─────────────────────────────────────────────────
   { name: 'React', icon: 'SiReact', color: '#61DAFB', category: 'Core' },
   { name: 'Next.js', icon: 'SiNextdotjs', color: '#e8e8f0', category: 'Core' },
   { name: 'TypeScript', icon: 'SiTypescript', color: '#3178C6', category: 'Core' },
   { name: 'JavaScript', icon: 'SiJavascript', color: '#F7DF1E', category: 'Core' },
   { name: 'HTML5', icon: 'SiHtml5', color: '#E34F26', category: 'Core' },
   { name: 'CSS3', icon: 'FaCss3Alt', color: '#1572B6', category: 'Core' },
-  { name: 'SASS/SCSS', icon: 'SiSass', color: '#CC6699', category: 'Core' },
+  { name: 'SASS / SCSS', icon: 'SiSass', color: '#CC6699', category: 'Core' },
 
-  // ── State Management ─────────────────────────────────────────────────────
+  // ── State Management ─────────────────────────────────────
   { name: 'Zustand', icon: 'TbCube', color: '#ffc107', category: 'State' },
-  { name: 'Redux', icon: 'SiRedux', color: '#764ABC', category: 'State' },
+  { name: 'Redux Toolkit', icon: 'SiRedux', color: '#764ABC', category: 'State' },
   { name: 'TanStack Query', icon: 'TbTable', color: '#FF4154', category: 'State' },
 
-  // ── UI Libraries ─────────────────────────────────────────────────────────
+  // ── UI Libraries / Animation ─────────────────────────────
   { name: 'Material UI', icon: 'SiMui', color: '#007FFF', category: 'UI' },
   { name: 'Tailwind CSS', icon: 'SiTailwindcss', color: '#06B6D4', category: 'UI' },
-  { name: 'PrimeReact', icon: 'TbDiamond', color: '#41B883', category: 'UI' },
-  { name: 'Bootstrap 5', icon: 'SiBootstrap', color: '#7952B3', category: 'UI' },
   { name: 'Framer Motion', icon: 'SiFramer', color: '#e8e8f0', category: 'UI' },
   { name: 'GSAP', icon: 'SiGsap', color: '#88CE02', category: 'UI' },
 
-  // ── Data & Tables ────────────────────────────────────────────────────────
+  // ── Data / Tables ────────────────────────────────────────
   { name: 'TanStack Table', icon: 'TbLayoutGrid', color: '#FF4154', category: 'Data' },
-  { name: 'Virtual Scroll', icon: 'TbInfinity', color: '#ffc107', category: 'Data' },
 
-  // ── Backend / API ────────────────────────────────────────────────────────
+  // ── Backend / API ────────────────────────────────────────
   { name: 'Node.js', icon: 'SiNodedotjs', color: '#339933', category: 'Backend' },
   { name: 'Express.js', icon: 'SiExpress', color: '#e8e8f0', category: 'Backend' },
   { name: 'MongoDB', icon: 'SiMongodb', color: '#47A248', category: 'Backend' },
   { name: 'Firebase', icon: 'SiFirebase', color: '#FFCA28', category: 'Backend' },
   { name: 'Axios', icon: 'SiAxios', color: '#5A29E4', category: 'Backend' },
 
-  // ── Mobile ───────────────────────────────────────────────────────────────
-  { name: 'React Native', icon: 'TbBrandReactNative', color: '#61DAFB', category: 'Mobile' },
-  { name: 'Expo', icon: 'SiExpo', color: '#e8e8f0', category: 'Mobile' },
-
-  // ── 3D / Creative ────────────────────────────────────────────────────────
+  // ── Creative / 3D ────────────────────────────────────────
   { name: 'Three.js', icon: 'SiThreedotjs', color: '#e8e8f0', category: '3D' },
-  { name: 'DaVinci Resolve', icon: 'SiDavinciresolve', color: '#FF6B35', category: '3D' },
-  { name: 'Adobe Photoshop', icon: 'SiAdobephotoshop', color: '#31A8FF', category: '3D' },
 
-  // ── Design ───────────────────────────────────────────────────────────────
+  // ── Design ───────────────────────────────────────────────
   { name: 'Figma', icon: 'SiFigma', color: '#F24E1E', category: 'Design' },
 
-  // ── Tooling ──────────────────────────────────────────────────────────────
+  // ── Tooling ──────────────────────────────────────────────
   { name: 'Git', icon: 'SiGit', color: '#F05032', category: 'Tooling' },
   { name: 'GitHub', icon: 'SiGithub', color: '#e8e8f0', category: 'Tooling' },
   { name: 'Vite', icon: 'SiVite', color: '#646CFF', category: 'Tooling' },
@@ -71,13 +72,12 @@ export const SKILLS = [
 
 // ─── CATEGORY ORDER for display ────────────────────────────────────────────
 export const SKILL_CATEGORIES = [
-  { key: 'Core',    label: 'Core' },
-  { key: 'State',   label: 'State Management' },
-  { key: 'UI',      label: 'UI Libraries' },
-  { key: 'Data',    label: 'Data & Tables' },
+  { key: 'Core', label: 'Core' },
+  { key: 'State', label: 'State Management' },
+  { key: 'UI', label: 'UI Libraries' },
+  { key: 'Data', label: 'Data & Tables' },
   { key: 'Backend', label: 'Backend / API' },
-  { key: 'Mobile',  label: 'Mobile' },
-  { key: '3D',      label: '3D / Creative' },
-  { key: 'Design',  label: 'Design' },
+  { key: '3D', label: '3D / Creative' },
+  { key: 'Design', label: 'Design' },
   { key: 'Tooling', label: 'Tooling' },
 ]

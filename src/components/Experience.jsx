@@ -29,24 +29,37 @@ const experiences = [
   {
     id: 'nde',
     company: 'New Digital Easy (NDE)',
-    role: 'Senior Frontend Developer',
+    role: 'Frontend Developer',
     period: '2024 — Present',
     location: 'Karur, Tamil Nadu',
     type: 'Full-time',
     current: true,
     accent: '#ffc107',
     logo: 'NDE',
-    summary: 'Architecting high-performance enterprise SaaS solutions, focusing on complex state management and scalable frontend infrastructure for data-intensive applications.',
+
+    summary:
+      'Working on frontend development for internal business applications, focusing on building scalable UI components and improving user experience for data-driven systems.',
+
     bullets: [
-      'Architected and deployed an enterprise-grade File Management System featuring nested hierarchies, real-time Pragmatic DnD (Atlassian) integration, and optimistic UI updates via Zustand.',
-      'Engineered a high-performance CRM dashboard capable of rendering 100k+ records using TanStack Table and Virtualization, maintaining a fluid 60fps user experience.',
-      'Spearheaded frontend performance initiatives, reducing TTI (Time to Interactive) by 40% through aggressive code-splitting, lazy loading, and fine-grained memoization strategies.',
-      'Developed a comprehensive, reusable Design System using Material UI (MUI) and TypeScript, reducing development turnaround time for new features by 50%.',
-      'Established core frontend architecture patterns, ensuring maintainable, type-safe codebases and mentor-driven code review processes.',
-      'Implemented robust data fetching layers with TanStack Query, optimizing server-state synchronization and reducing redundant API overhead by 30%.',
+      'Developed a File Management System with nested folder structures and drag-and-drop functionality using Atlassian Pragmatic Drag and Drop.',
+      'Implemented state management using Zustand to handle application state and improve UI responsiveness.',
+      'Built reusable UI components using React, TypeScript, and Material UI to maintain consistency across the application.',
+      'Implemented data tables using TanStack Table with virtualization to handle large datasets efficiently.',
+      'Integrated REST APIs and improved data fetching patterns using TanStack Query.',
+      'Worked closely with backend developers to implement new features and improve application usability.',
     ],
-    stack: ['React', 'TypeScript', 'Zustand', 'MUI', 'TanStack Query', 'TanStack Table', 'Pragmatic DnD', 'React Window'],
+
+    stack: [
+      'React',
+      'TypeScript',
+      'Zustand',
+      'Material UI',
+      'TanStack Query',
+      'TanStack Table',
+      'React Window',
+    ],
   },
+
   {
     id: 'kodukku',
     company: 'Kodukku Classified Pvt. Ltd.',
@@ -57,16 +70,29 @@ const experiences = [
     current: false,
     accent: '#00f0ff',
     logo: 'KCL',
-    summary: 'Developed a unified multi-vertical platform, streamlining diverse business modules into a cohesive and performant user interface.',
+
+    summary:
+      'Worked on building frontend features for a multi-module classified platform including HRMS and internal tools.',
+
     bullets: [
-      'Engineered a multi-module classified ecosystem encompassing real estate, movie ticketing, and internal HRMS using a shared component architecture.',
-      'Built a full-scale HRMS portal managing employee lifecycles, payroll logic, and attendance tracking with Redux-driven state predictability.',
-      'Integrated a real-time messaging system within the HRMS using Socket.io, enabling instant communication between employees and HR administrators.',
-      'Optimized global state handling and API integration layers using Axios interceptors for automated authentication and error handling.',
-      'Designed responsive, cross-browser compatible layouts using PrimeReact and CSS Modules, ensuring a consistent UX across mobile and desktop.',
+      'Developed frontend modules for multiple platform sections including classifieds and internal HRMS tools.',
+      'Built HRMS features such as employee attendance tracking, payslip management, and role-based access control.',
+      'Implemented global state management using Redux for predictable application state handling.',
+      'Integrated real-time messaging functionality using Socket.io for internal communication.',
+      'Designed responsive user interfaces using React and PrimeReact components.',
     ],
-    stack: ['React', 'Redux', 'Socket.io', 'PrimeReact', 'Axios', 'REST APIs', 'React Router'],
+
+    stack: [
+      'React',
+      'Redux',
+      'Socket.io',
+      'PrimeReact',
+      'Axios',
+      'REST APIs',
+      'React Router',
+    ],
   },
+
   {
     id: 'enrich',
     company: 'Enrich Money',
@@ -77,14 +103,26 @@ const experiences = [
     current: false,
     accent: '#cc66ff',
     logo: 'EM',
-    summary: 'Bridged the gap between high-fidelity design and trading interfaces, delivering polished UI components for real-time stock platforms.',
+
+    summary:
+      'Worked as a UI developer building user interfaces for a stock trading platform.',
+
     bullets: [
-      'Developed high-fidelity UI components for trading and stock platforms using Angular and Material UI (MUI), ensuring a professional and consistent user interface.',
-      'Built interactive dashboards and reusable UI modules, improving usability and interface consistency across the trading platform.',
-      'Collaborated closely with backend teams to map complex financial APIs into intuitive, responsive UI elements.',
-      'Ensured cross-browser compatibility and mobile responsiveness for the trading dashboard, significantly improving overall user retention.',
+      'Developed UI components for trading dashboards using Angular and Material UI.',
+      'Converted Figma designs into responsive and reusable frontend components.',
+      'Worked with backend APIs to display real-time trading data in the UI.',
+      'Improved responsiveness and cross-browser compatibility of the trading platform.',
     ],
-    stack: ['Angular', 'TypeScript', 'Material UI (MUI)', 'SASS', 'REST APIs', 'HTML5/CSS3', 'Tailwind Css'],
+
+    stack: [
+      'Angular',
+      'TypeScript',
+      'Material UI',
+      'SASS',
+      'REST APIs',
+      'HTML5',
+      'CSS3',
+    ],
   },
 ]
 

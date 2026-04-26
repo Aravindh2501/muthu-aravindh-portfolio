@@ -1,7 +1,10 @@
 import { useEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import about from "../assets/abot.png"
+import about from "../assets/abot.png";
+
+import resume from "../assets/Muthu_Aravindh_Resume.pdf"
+
 gsap.registerPlugin(ScrollTrigger)
 
 // ── Inline SVG premium icons ──────────────────────────────────────────────────
@@ -10,11 +13,8 @@ const IconBuilding = () => (
     <rect x="3" y="3" width="18" height="18" rx="2"/><path d="M3 9h18M9 21V9M15 21V9"/>
   </svg>
 )
-const IconCode = () => (
-  <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
-    <polyline points="16 18 22 12 16 6"/><polyline points="8 6 2 12 8 18"/>
-  </svg>
-)
+
+
 const IconPin = () => (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z"/><circle cx="12" cy="9" r="2.5"/>
@@ -30,6 +30,24 @@ const IconCamera = () => (
     <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z"/><circle cx="12" cy="13" r="4"/>
   </svg>
 )
+
+
+const IconCode = () => (
+  <svg
+    width="15"
+    height="15"
+    viewBox="0 0 24 24"
+    fill="none"
+    stroke="currentColor"
+    strokeWidth="1.6"
+    strokeLinecap="round"
+    strokeLinejoin="round"
+  >
+    <polyline points="16 18 22 12 16 6" />
+    <polyline points="8 6 2 12 8 18" />
+  </svg>
+)
+
 const IconStar = () => (
   <svg width="13" height="13" viewBox="0 0 24 24" fill="currentColor" stroke="none">
     <polygon points="12 2 15.09 8.26 22 9.27 17 14.14 18.18 21.02 12 17.77 5.82 21.02 7 14.14 2 9.27 8.91 8.26 12 2"/>
@@ -44,15 +62,15 @@ const IconArrow = () => (
 // ── Data ──────────────────────────────────────────────────────────────────────
 const highlights = [
   { label: 'Company',  value: 'NDE · New Digital Easy', Icon: IconBuilding },
-  { label: 'Role',     value: 'Senior Frontend Engineer', Icon: IconCode     },
-  { label: 'Location', value: 'Chennai, India',           Icon: IconPin      },
-  { label: 'Focus',    value: 'React · TS · UI Systems',  Icon: IconZap      },
+  { label: 'Role',     value: 'Frontend Developer', Icon: IconCode },
+  { label: 'Location', value: 'Karur, India', Icon: IconPin },
+  { label: 'Focus',    value: 'React · TypeScript · UI Development', Icon: IconZap },
 ]
 
 const stats = [
-  { num: '3+',  sub: 'Years Exp' },
-  { num: '20+', sub: 'Projects'  },
-  { num: '∞',   sub: 'Curiosity' },
+  { num: '3+', sub: 'Years Experience' },
+  { num: '10+', sub: 'Projects Built' },
+  { num: 'Daily', sub: 'Learning' },
 ]
 
 // ── Styles ────────────────────────────────────────────────────────────────────
@@ -336,8 +354,8 @@ export default function About() {
                   animationDelay: '1s',
                 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
-                    <span style={{ color: 'rgba(97,218,251,0.8)', display: 'flex' }}><IconCamera /></span>
-                    <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 11, fontWeight: 600, color: 'rgba(97,218,251,0.8)', letterSpacing: '0.05em' }}>mad.shot.diary</span>
+                    <span style={{ color: 'rgba(97,218,251,0.8)', display: 'flex' }}><IconCode /></span>
+                    <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 11, fontWeight: 600, color: 'rgba(97,218,251,0.8)', letterSpacing: '0.05em' }}>Developer</span>
                   </div>
                 </div>
 
@@ -430,32 +448,40 @@ export default function About() {
               fontSize: 'clamp(2rem, 3.5vw, 2.8rem)', color: '#e8e8f0',
               lineHeight: 1.15, marginBottom: '1.5rem',
             }}>
-              Building the web{' '}
+             Frontend Developer 
               <span style={{
                 background: 'linear-gradient(135deg, #ffd54f, #ffc107, #ff8f00)',
                 WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
-              }}>one pixel</span>{' '}
-              at a time.
+              }}>focused on </span>
+             building modern web applications.
             </h2>
 
             {/* Bio paragraphs */}
-          <div style={{ display: 'flex', flexDirection: 'column', gap: '1.1rem' }}>
-  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.58)' }}>
-    I'm a Senior Frontend Engineer at{' '}
-    <span style={{ color: '#ffc107', fontWeight: 600 }}>NDE (New Digital Easy)</span> in Chennai, India. I have over 3 years of experience building high-performance, visually engaging web applications that prioritize both functionality and user experience.
-  </p>
-  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.58)' }}>
-    My core stack includes{' '}
-    <span style={{ color: 'rgba(255,193,7,0.85)', fontWeight: 500 }}>React, TypeScript, Zustand, and Material UI</span>. I specialize in creating scalable frontend architectures, including CRM dashboards with TanStack Table/Query, real-time data visualizations, and design systems with rich micro-interactions.
-  </p>
-  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.58)' }}>
-    Outside of work, I pursue photography and videography on weekends through my brand{' '}
-    <span style={{ color: 'rgba(97,218,251,0.85)', fontWeight: 500 }}>mad.shot.diary</span>. This hobby sharpens my eye for detail and strengthens my sense of visual design, which I bring into UI/UX projects to create interfaces that are both functional and aesthetically pleasing.
-  </p>
-  <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.58)' }}>
-    I believe great software should <em>feel</em> as good as it works. Performance is non-negotiable, accessibility is essential, and every interaction should be intentional.
-  </p>
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '1.1rem' }}>
+
+<p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.58)' }}>
+  I'm a Frontend Developer currently working at 
+  <span style={{ color: '#ffc107', fontWeight: 600 }}> NDE (New Digital Easy)</span> in Chennai. 
+  I have around 3 years of experience building web applications using modern frontend technologies.
+</p>
+
+<p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.58)' }}>
+  My primary stack includes 
+  <span style={{ color: 'rgba(255,193,7,0.85)', fontWeight: 500 }}> React, TypeScript, Zustand, and Material UI</span>. 
+  I work on building user interfaces, dashboards, and application features that focus on usability, maintainability, and performance.
+</p>
+
+<p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.58)' }}>
+  Recently I have been improving my skills in modern frontend architecture, state management, and building scalable applications using tools like TanStack Query and modern React patterns.
+</p>
+
+<p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.58)' }}>
+  Outside of work, I also enjoy photography through my project 
+  <span style={{ color: 'rgba(97,218,251,0.85)', fontWeight: 500 }}> mad.shot.diary</span>, 
+  which helps me develop a strong eye for visual design and creativity.
+</p>
+
 </div>
 
             {/* Tech tags */}
@@ -487,25 +513,25 @@ export default function About() {
               <span style={{ width: 1, height: 16, background: 'rgba(255,193,7,0.2)' }} />
 
               <a
-                href="/resume.pdf"
-                download
-                data-cursor-hover
-                style={{
-                  display: 'inline-flex', alignItems: 'center', gap: 7,
-                  padding: '9px 20px', borderRadius: '999px',
-                  background: 'linear-gradient(135deg, #ffc107, #ff8f00)',
-                  fontFamily: "'Space Grotesk', sans-serif",
-                  fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.08em',
-                  color: '#020208', cursor: 'none', textDecoration: 'none',
-                  boxShadow: '0 0 20px rgba(255,193,7,0.25)',
-                  transition: 'box-shadow 0.3s, transform 0.2s',
-                  textTransform: 'uppercase',
-                }}
-                onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 0 32px rgba(255,193,7,0.45)'; e.currentTarget.style.transform = 'scale(1.04)' }}
-                onMouseLeave={e => { e.currentTarget.style.boxShadow = '0 0 20px rgba(255,193,7,0.25)'; e.currentTarget.style.transform = 'scale(1)' }}
-              >
-                <IconArrow /> Resume
-              </a>
+                href={resume}
+  download="Muthu_Aravindh_Resume.pdf"
+  data-cursor-hover
+  style={{
+    display: 'inline-flex', alignItems: 'center', gap: 7,
+    padding: '9px 20px', borderRadius: '999px',
+    background: 'linear-gradient(135deg, #ffc107, #ff8f00)',
+    fontFamily: "'Space Grotesk', sans-serif",
+    fontSize: '0.78rem', fontWeight: 700, letterSpacing: '0.08em',
+    color: '#020208', cursor: 'none', textDecoration: 'none',
+    boxShadow: '0 0 20px rgba(255,193,7,0.25)',
+    transition: 'box-shadow 0.3s, transform 0.2s',
+    textTransform: 'uppercase',
+  }}
+  onMouseEnter={e => { e.currentTarget.style.boxShadow = '0 0 32px rgba(255,193,7,0.45)'; e.currentTarget.style.transform = 'scale(1.04)' }}
+  onMouseLeave={e => { e.currentTarget.style.boxShadow = '0 0 20px rgba(255,193,7,0.25)'; e.currentTarget.style.transform = 'scale(1)' }}
+>
+  <IconArrow /> Resume
+</a>
 
               <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: '0.78rem', color: 'rgba(255,255,255,0.28)', letterSpacing: '0.05em' }}>
                 Chennai, India
