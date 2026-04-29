@@ -28,7 +28,7 @@ const IconPin = () => (
 const experiences = [
   {
     id: 'nde',
-    company: 'New Digital Easy (NDE)',
+    company: 'Now Digital Easy (NDE)',
     role: 'Frontend Developer',
     period: '2024 — Present',
     location: 'Karur, Tamil Nadu',
