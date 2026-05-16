@@ -61,7 +61,7 @@ const IconArrow = () => (
 
 // ── Data ──────────────────────────────────────────────────────────────────────
 const highlights = [
-  { label: 'Company', value: 'NDE · New Digital Easy', Icon: IconBuilding },
+  { label: 'Company', value: 'NDE · Now Digital Easy', Icon: IconBuilding },
   { label: 'Role', value: 'Frontend Developer', Icon: IconCode },
   { label: 'Location', value: 'Karur, India', Icon: IconPin },
   { label: 'Focus', value: 'React · TypeScript · UI Development', Icon: IconZap },

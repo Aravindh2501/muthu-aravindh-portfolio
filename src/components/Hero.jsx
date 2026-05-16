@@ -114,7 +114,7 @@ export default function Hero() {
       className="relative min-h-screen flex items-center overflow-hidden"
     >
       {/* ── Three.js Canvas — Hero interactive parallax stars only ── */}
-      <div className="absolute inset-0 z-0">
+      {/* <div className="absolute inset-0 z-0">
         <Canvas
           camera={{ position: [0, 0, 5], fov: 60 }}
           gl={{ antialias: true, alpha: true, powerPreference: 'high-performance' }}
@@ -123,7 +123,7 @@ export default function Hero() {
           <GalaxyBackground />
           <Starfield mouseNorm={mouseState} />
         </Canvas>
-      </div>
+      </div> */}
 
       {/* ── Content grid: text left | robot right ── */}
       <div className="relative z-10 w-full max-w-7xl mx-auto px-6 lg:px-12 grid lg:grid-cols-2 gap-12 items-center min-h-screen py-24">
