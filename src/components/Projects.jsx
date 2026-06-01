@@ -62,7 +62,7 @@ const projects = [
     description:
       'SaaS studio management platform for photography businesses built as a pnpm monorepo. Covers lead pipeline, Kanban board, client management, and payment tracking with a Prisma schema spanning 13+ models.',
 
-    tech: ['Next.js 15', 'Supabase', 'Prisma', 'TanStack Query v5', 'Zustand v5', 'Tailwind CSS v4'],
+    tech: ['Next.js 15', 'Supabase', 'Prisma', 'TanStack Query v5', 'Zustand v5', 'Tailwind CSS'],
 
     gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
     accent: '#f093fb',
