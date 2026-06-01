@@ -29,41 +29,46 @@ const experiences = [
   {
     id: 'nde',
     company: 'Now Digital Easy (NDE)',
-    role: 'Frontend Developer',
+    role: 'Senior Frontend Developer',
     period: '2024 — Present',
-    location: 'Karur, Tamil Nadu',
+    location: 'Remote',
     type: 'Full-time',
     current: true,
     accent: '#ffc107',
     logo: 'NDE',
 
     summary:
-      'Working on frontend development for internal business applications, focusing on building scalable UI components and improving user experience for data-driven systems.',
+      'Independently architected and owned the complete frontend of a Google Workspace-style enterprise platform covering Drive, Docs, Mail, Meet, and CRM modules with 15GB unified storage. Made all frontend decisions solo with no senior oversight.',
 
     bullets: [
-      'Developed a File Management System with nested folder structures and drag-and-drop functionality using Atlassian Pragmatic Drag and Drop.',
-      'Implemented state management using Zustand to handle application state and improve UI responsiveness.',
-      'Built reusable UI components using React, TypeScript, and Material UI to maintain consistency across the application.',
-      'Implemented data tables using TanStack Table with virtualization to handle large datasets efficiently.',
-      'Integrated REST APIs and improved data fetching patterns using TanStack Query.',
-      'Worked closely with backend developers to implement new features and improve application usability.',
+      'Architected a scalable file management interface as part of a 15GB unified storage system shared across Drive, Mail, Meet, and Chat modules without UI degradation or scroll lag.',
+      'Implemented TanStack Virtual for list virtualization, cutting DOM node count by ~80% on large datasets and eliminating scroll jank completely on low-end devices.',
+      'Built a rich-text collaborative document editor using Lexical (Meta) with Yjs CRDT and WebSocket for conflict-free real-time editing across multiple users simultaneously.',
+      'Built a fully configurable reusable TanStack Table component across all CRM pages with multi-column sorting, filtering, column pinning, drag-and-drop reordering, and bulk actions handling 1,00,000+ records.',
+      'Developed a Kanban pipeline board with drag-and-drop deal cards and real-time stage counters for visual sales pipeline management.',
+      'Built a centralized MUI theme system with full component overrides, semantic color tokens, dark/light mode — a single config change propagates across the entire product UI.',
     ],
 
     stack: [
       'React',
       'TypeScript',
-      'Zustand',
-      'Material UI',
+      'Next.js',
       'TanStack Query',
       'TanStack Table',
-      'React Window',
+      'TanStack Virtual',
+      'Zustand',
+      'Material UI',
+      'WebSocket',
+      'Yjs CRDT',
+      'Lexical',
+      'Atlassian DnD',
     ],
   },
 
   {
     id: 'kodukku',
-    company: 'Kodukku Classified Pvt. Ltd.',
-    role: 'Frontend Developer',
+    company: 'Kodukku Classifieds Pvt. Ltd.',
+    role: 'React Developer',
     period: '2023 — 2024',
     location: 'Chennai, India',
     type: 'Full-time',
@@ -72,24 +77,23 @@ const experiences = [
     logo: 'KCL',
 
     summary:
-      'Worked on building frontend features for a multi-module classified platform including HRMS and internal tools.',
+      'Led frontend architecture as the founding frontend developer, defining component structure, folder organization, and coding standards for the entire codebase from scratch across a classifieds marketplace and internal HRMS.',
 
     bullets: [
-      'Developed frontend modules for multiple platform sections including classifieds and internal HRMS tools.',
-      'Built HRMS features such as employee attendance tracking, payslip management, and role-based access control.',
-      'Implemented global state management using Redux for predictable application state handling.',
-      'Integrated real-time messaging functionality using Socket.io for internal communication.',
-      'Designed responsive user interfaces using React and PrimeReact components.',
+      'Built a classifieds marketplace UI using Material UI and TanStack Query for server state, caching, and background sync, reducing redundant network calls through smart cache invalidation.',
+      'Developed an internal HRMS covering employee attendance tracking, dynamic payslip generation with PDF export, and role-based access control for Admin, Manager, and Employee roles.',
+      'Managed application state using Redux Toolkit with normalized data structures for scalable, predictable data flow across modules.',
+      'Defined component architecture, folder structure, and coding standards for the entire frontend codebase from scratch as the founding frontend developer.',
     ],
 
     stack: [
       'React',
-      'Redux',
-      'Socket.io',
-      'PrimeReact',
-      'Axios',
+      'TanStack Query',
+      'Redux Toolkit',
+      'Material UI',
       'REST APIs',
       'React Router',
+      'Axios',
     ],
   },
 
@@ -105,23 +109,21 @@ const experiences = [
     logo: 'EM',
 
     summary:
-      'Worked as a UI developer building user interfaces for a stock trading platform.',
+      'Worked as a UI developer building pixel-accurate interfaces and HTML email templates for a financial trading platform alongside the development team.',
 
     bullets: [
-      'Developed UI components for trading dashboards using Angular and Material UI.',
-      'Converted Figma designs into responsive and reusable frontend components.',
-      'Worked with backend APIs to display real-time trading data in the UI.',
-      'Improved responsiveness and cross-browser compatibility of the trading platform.',
+      'Built responsive UI components and styling using SASS and Material UI for a financial trading platform, working on pixel-accurate design implementation.',
+      'Developed HTML email templates using fixed 600px table-based layouts with inline styles for cross-client compatibility across Gmail, Outlook, and Apple Mail.',
+      'Identified and resolved cross-browser compatibility bugs across Chrome, Firefox, Safari, and Edge, improving frontend stability and reducing QA-reported issues.',
     ],
 
     stack: [
-      'Angular',
-      'TypeScript',
-      'Material UI',
-      'SASS',
-      'REST APIs',
       'HTML5',
       'CSS3',
+      'SASS',
+      'Material UI',
+      'HTML Email',
+      'Responsive Design',
     ],
   },
 ]
@@ -231,11 +233,11 @@ function CardBody({ exp }) {
         }}>
           {exp.role}
         </h3>
-        <div style={{ 
-          fontFamily: "'Space Grotesk', sans-serif", 
-          fontSize: 14, 
-          fontWeight: 700, 
-          color: exp.accent, 
+        <div style={{
+          fontFamily: "'Space Grotesk', sans-serif",
+          fontSize: 14,
+          fontWeight: 700,
+          color: exp.accent,
           marginBottom: 12,
           textShadow: `0 0 8px ${exp.accent}40`
         }}>
@@ -287,15 +289,15 @@ function CardBody({ exp }) {
               key={tag}
               className="stack-chip"
               style={{ background: 'rgba(255,255,255,0.05)', border: `1px solid rgba(255,255,255,0.15)`, color: 'rgba(255,255,255,0.85)' }}
-              onMouseEnter={e => { 
-                e.currentTarget.style.background = `${exp.accent}25`; 
-                e.currentTarget.style.color = '#ffffff'; 
+              onMouseEnter={e => {
+                e.currentTarget.style.background = `${exp.accent}25`;
+                e.currentTarget.style.color = '#ffffff';
                 e.currentTarget.style.borderColor = exp.accent;
                 e.currentTarget.style.boxShadow = `0 0 10px ${exp.accent}40`;
               }}
-              onMouseLeave={e => { 
-                e.currentTarget.style.background = 'rgba(255,255,255,0.05)'; 
-                e.currentTarget.style.color = 'rgba(255,255,255,0.85)'; 
+              onMouseLeave={e => {
+                e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
+                e.currentTarget.style.color = 'rgba(255,255,255,0.85)';
                 e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)';
                 e.currentTarget.style.boxShadow = 'none';
               }}
@@ -346,7 +348,6 @@ function TimelineRow({ exp, index }) {
             <CardBody exp={exp} />
           </div>
         ) : (
-          /* Year label right-aligned */
           <div ref={leftRef} style={{ textAlign: 'right', paddingTop: 14, opacity: 0 }}>
             <span style={{
               fontFamily: "'Space Grotesk', sans-serif",
@@ -382,7 +383,6 @@ function TimelineRow({ exp, index }) {
             <CardBody exp={exp} />
           </div>
         ) : (
-          /* Year label left-aligned */
           <div ref={rightRef} style={{ paddingTop: 14, opacity: 0 }}>
             <span style={{
               fontFamily: "'Space Grotesk', sans-serif",
@@ -415,7 +415,6 @@ export default function Experience() {
           scrollTrigger: { trigger: headingRef.current, start: 'top 82%' },
         }
       )
-      // Scrubbed line growth
       gsap.fromTo(lineRef.current,
         { scaleY: 0 },
         {
@@ -474,20 +473,18 @@ export default function Experience() {
             fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem',
             color: 'rgba(255,255,255,0.65)', maxWidth: '40rem', lineHeight: 1.7,
           }}>
-            3+ years across product startups — from multi-module classified platforms to
-            enterprise file systems and CRM dashboards with 10K+ row performance.
+            3+ years across product startups — from a Google Workspace-scale enterprise platform
+            to classified marketplaces and CRM dashboards handling 1,00,000+ records.
           </p>
         </div>
 
-        {/* ── Desktop alternating timeline ── */}
+        {/* Desktop alternating timeline */}
         <div ref={timelineRef} className="relative hidden md:block">
-          {/* Background line */}
           <div style={{
             position: 'absolute', left: '50%', top: 0, bottom: 0,
             width: 2, transform: 'translateX(-50%)',
             background: 'rgba(255,255,255,0.05)', zIndex: 0,
           }}>
-            {/* Scrubbed glow line */}
             <div ref={lineRef} style={{
               position: 'absolute', inset: 0,
               background: 'linear-gradient(to bottom, #ffc107 0%, #00f0ff 50%, #cc66ff 100%)',
@@ -501,27 +498,25 @@ export default function Experience() {
           ))}
         </div>
 
-        {/* ── Mobile left-aligned timeline ── */}
+        {/* Mobile left-aligned timeline */}
         <div className="md:hidden relative" style={{ paddingLeft: 40 }}>
           <div style={{
             position: 'absolute', left: 16, top: 0, bottom: 0,
             width: 2, background: 'rgba(255,255,255,0.05)',
           }}/>
-          {experiences.map((exp, i) => {
-            return (
-              <div key={exp.id} style={{ position: 'relative', marginBottom: 36 }}>
-                <div style={{
-                  position: 'absolute', left: -32, top: 18,
-                  width: 14, height: 14, borderRadius: '50%',
-                  background: '#ffffff',
-                  boxShadow: `0 0 15px 3px ${exp.accent}`,
-                  border: `3px solid ${exp.accent}`,
-                  animation: exp.current ? 'dotPulse 2.4s ease infinite' : 'none',
-                }}/>
-                <CardBody exp={exp} />
-              </div>
-            )
-          })}
+          {experiences.map((exp, i) => (
+            <div key={exp.id} style={{ position: 'relative', marginBottom: 36 }}>
+              <div style={{
+                position: 'absolute', left: -32, top: 18,
+                width: 14, height: 14, borderRadius: '50%',
+                background: '#ffffff',
+                boxShadow: `0 0 15px 3px ${exp.accent}`,
+                border: `3px solid ${exp.accent}`,
+                animation: exp.current ? 'dotPulse 2.4s ease infinite' : 'none',
+              }}/>
+              <CardBody exp={exp} />
+            </div>
+          ))}
         </div>
 
         {/* Bottom divider */}
