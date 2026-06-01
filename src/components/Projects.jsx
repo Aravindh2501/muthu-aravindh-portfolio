@@ -265,7 +265,7 @@ function ProjectCard({ project, index }) {
               Live Demo
             </a>
           )}
-          {project.github && (
+          {/* {project.github && (
             <a
               href={project.github}
               target="_blank"
@@ -284,7 +284,7 @@ function ProjectCard({ project, index }) {
               <FiGithub size={13} />
               GitHub
             </a>
-          )}
+          )} */}
         </div>
       </div>
     </div>
