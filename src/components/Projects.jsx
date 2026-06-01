@@ -7,94 +7,94 @@ gsap.registerPlugin(ScrollTrigger)
 
 const projects = [
   {
-    title: 'NDE Drive File Management System',
+    title: 'NDE Drive — File Management System',
     description:
-      'A file management interface similar to Google Drive built using React. Supports nested folder structures, file organization, and drag-and-drop operations for managing files efficiently.',
+      'Enterprise file management interface built as part of a Google Workspace-style platform. Supports nested folder hierarchies, full CRUD, multi-select, bulk operations, and real-time sync across concurrent sessions via WebSocket.',
 
-    tech: ['React', 'Material UI', 'Pragmatic DnD (Atlassian)', 'React Window', 'Zustand'],
+    tech: ['React', 'TanStack Query', 'TanStack Virtual', 'Atlassian DnD', 'Zustand', 'Material UI', 'WebSocket'],
 
     gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
     accent: '#667eea',
 
     github: null,
-    live: '#',
+    live: null,
 
     featured: true,
-    label: 'Production · Internal Tool',
+    label: 'Production · Enterprise Platform',
   },
 
   {
-    title: 'CRM Dashboard & Kanban Pipeline',
+    title: 'NDE CRM — Dashboard & Kanban Pipeline',
     description:
-      'CRM dashboard built with React and Material UI featuring Kanban-style workflow management and data tables for managing leads and deals.',
+      'Full CRM frontend with a reusable TanStack Table component across 15+ screens handling 1,00,000+ records, Kanban pipeline board with drag-and-drop deal cards, and per-user column preferences persisted to backend.',
 
-    tech: ['React', 'Material UI', 'TanStack Table', 'TanStack Query', 'Zustand'],
+    tech: ['React', 'TanStack Table', 'TanStack Query', 'Zustand', 'Material UI', 'REST APIs'],
 
     gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
     accent: '#43e97b',
 
     github: null,
-    live: '#',
+    live: null,
 
     featured: true,
     label: 'Production · CRM',
   },
 
   {
-    title: 'Smart Expense Manager',
+    title: 'NDE Docs — Collaborative Editor',
     description:
-      'A mobile expense tracking application built to learn React Native. Allows users to track daily expenses and categorize transactions.',
+      'Rich-text collaborative document editor built with Lexical (Meta) and Yjs CRDT over WebSocket. Multiple users can write simultaneously with zero data loss or overwrite conflicts in real time.',
 
-    tech: ['React Native', 'TypeScript', 'SQLite', 'Expo'],
+    tech: ['React', 'Lexical', 'Yjs CRDT', 'WebSocket', 'Material UI'],
+
+    gradient: 'linear-gradient(135deg, #f7971e 0%, #ffd200 100%)',
+    accent: '#ffd200',
+
+    github: null,
+    live: null,
+
+    featured: true,
+    label: 'Production · Docs Module',
+  },
+
+  {
+    title: 'MAVX Studio CRM',
+    description:
+      'SaaS studio management platform for photography businesses built as a pnpm monorepo. Covers lead pipeline, Kanban board, client management, and payment tracking with a Prisma schema spanning 13+ models.',
+
+    tech: ['Next.js 15', 'Supabase', 'Prisma', 'TanStack Query v5', 'Zustand v5', 'Tailwind CSS v4'],
 
     gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
     accent: '#f093fb',
 
     github: 'https://github.com/Aravindh2501',
-    live: 'https://expo.dev/accounts/aravindh_2501/projects/MyApp/builds/6123254d-35a0-468d-8b7c-e85717ca5d1d',
+    live: null,
 
     featured: true,
-    label: 'Mobile Project',
+    label: 'Personal SaaS Project',
   },
 
   {
-    title: 'Logistics Dashboard Template',
+    title: 'Real-Time Chat App',
     description:
-      'A dashboard template built using React and Material UI with reusable components and modern UI design patterns.',
+      'Full-stack chat application with real-time bidirectional messaging via Socket.io, JWT authentication, paginated chat history via indexed MongoDB queries, and optimistic UI updates using Next.js App Router.',
 
-    tech: ['React', 'Material UI', 'Framer Motion', 'Zustand', 'Vite'],
-
-    gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
-    accent: '#fa709a',
-
-    github: 'https://github.com/Aravindh2501',
-    live: 'https://logisticsdashboard.vercel.app/',
-
-    featured: false,
-    label: 'Web App Template',
-  },
-
-  {
-    title: 'HRMS Portal',
-    description:
-      'Human Resource Management System for managing employee attendance, payroll information, and internal communication tools.',
-
-    tech: ['React', 'Redux', 'Material UI', 'Node.js', 'Chart.js'],
+    tech: ['Next.js', 'Express.js', 'MongoDB', 'Socket.io', 'shadcn/ui', 'JWT'],
 
     gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
     accent: '#4facfe',
 
-    github: null,
-    live: '#',
+    github: 'https://github.com/Aravindh2501',
+    live: null,
 
     featured: false,
-    label: 'Production · HRMS',
+    label: 'Full Stack Project',
   },
 
   {
     title: 'Spin Wheel Giveaway Tool',
     description:
-      'A simple interactive spin wheel tool used for giveaways. Supports importing participant data from files and selecting random winners.',
+      'Interactive spin wheel tool for Instagram giveaways. Supports importing participant data from Excel files and selecting random winners with smooth canvas animations.',
 
     tech: ['React', 'Tailwind CSS', 'XLSX Parser', 'HTML5 Canvas'],
 
@@ -106,7 +106,24 @@ const projects = [
 
     featured: false,
     label: 'Web Tool',
-  }
+  },
+
+  {
+    title: 'Smart Expense Manager',
+    description:
+      'Mobile expense tracking application built with React Native and Expo. Allows users to track daily expenses, categorize transactions, and view spending summaries with multi-theme support.',
+
+    tech: ['React Native', 'TypeScript', 'SQLite', 'Expo'],
+
+    gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
+    accent: '#fa709a',
+
+    github: 'https://github.com/Aravindh2501',
+    // live: 'https://expo.dev/accounts/aravindh_2501/projects/MyApp/builds/6123254d-35a0-468d-8b7c-e85717ca5d1d',
+
+    featured: false,
+    label: 'Mobile Project',
+  },
 ]
 
 function ProjectCard({ project, index }) {
@@ -127,7 +144,6 @@ function ProjectCard({ project, index }) {
       transformPerspective: 1000,
     })
 
-    // Move gradient spotlight
     const spotlight = card.querySelector('.card-spotlight')
     if (spotlight) {
       spotlight.style.background = `radial-gradient(circle at ${x * 100}% ${y * 100}%, ${project.accent}20, transparent 60%)`
@@ -168,7 +184,6 @@ function ProjectCard({ project, index }) {
         className="h-40 relative overflow-hidden"
         style={{ background: project.gradient }}
       >
-        {/* Abstract pattern overlay */}
         <div
           className="absolute inset-0"
           style={{
@@ -176,7 +191,6 @@ function ProjectCard({ project, index }) {
           }}
         />
 
-        {/* Project number */}
         <div
           className="absolute top-4 right-4 font-display font-bold text-5xl opacity-20"
           style={{ color: 'white', userSelect: 'none' }}
@@ -184,7 +198,6 @@ function ProjectCard({ project, index }) {
           {String(index + 1).padStart(2, '0')}
         </div>
 
-        {/* Label badge */}
         <div className="absolute bottom-4 left-4">
           <span
             className="px-3 py-1 rounded-full font-mono text-xs"
@@ -235,7 +248,7 @@ function ProjectCard({ project, index }) {
 
         {/* Buttons */}
         <div className="flex gap-3">
-          {project.live && project.live !== '#' && (
+          {project.live && (
             <a
               href={project.live}
               target="_blank"
@@ -252,24 +265,26 @@ function ProjectCard({ project, index }) {
               Live Demo
             </a>
           )}
-           {/* <a
-            href={project.github}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-display font-semibold transition-all duration-300"
-            style={{
-              background: 'rgba(255,255,255,0.06)',
-              border: '1px solid rgba(255,255,255,0.1)',
-              color: 'rgba(255,255,255,0.6)',
-              cursor: 'none',
-            }}
-            onMouseEnter={e => e.currentTarget.style.color = '#fff'}
-            onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
-            data-cursor-hover
-          >
-            <FiGithub size={13} />
-            GitHub
-          </a> */}
+          {project.github && (
+            <a
+              href={project.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-display font-semibold transition-all duration-300"
+              style={{
+                background: 'rgba(255,255,255,0.06)',
+                border: '1px solid rgba(255,255,255,0.1)',
+                color: 'rgba(255,255,255,0.6)',
+                cursor: 'none',
+              }}
+              onMouseEnter={e => e.currentTarget.style.color = '#fff'}
+              onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
+              data-cursor-hover
+            >
+              <FiGithub size={13} />
+              GitHub
+            </a>
+          )}
         </div>
       </div>
     </div>
