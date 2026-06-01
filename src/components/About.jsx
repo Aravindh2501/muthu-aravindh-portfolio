@@ -14,7 +14,6 @@ const IconBuilding = () => (
   </svg>
 )
 
-
 const IconPin = () => (
   <svg width="15" height="15" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.6" strokeLinecap="round" strokeLinejoin="round">
     <path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7z" /><circle cx="12" cy="9" r="2.5" />
@@ -30,7 +29,6 @@ const IconCamera = () => (
     <path d="M23 19a2 2 0 0 1-2 2H3a2 2 0 0 1-2-2V8a2 2 0 0 1 2-2h4l2-3h6l2 3h4a2 2 0 0 1 2 2z" /><circle cx="12" cy="13" r="4" />
   </svg>
 )
-
 
 const IconCode = () => (
   <svg
@@ -62,14 +60,14 @@ const IconArrow = () => (
 // ── Data ──────────────────────────────────────────────────────────────────────
 const highlights = [
   { label: 'Company', value: 'NDE · Now Digital Easy', Icon: IconBuilding },
-  { label: 'Role', value: 'Frontend Developer', Icon: IconCode },
-  { label: 'Location', value: 'Karur, India', Icon: IconPin },
-  { label: 'Focus', value: 'React · TypeScript · UI Development', Icon: IconZap },
+  { label: 'Role', value: 'Senior Frontend Developer', Icon: IconCode },
+  { label: 'Location', value: 'Chennai, India · Remote', Icon: IconPin },
+  { label: 'Focus', value: 'React · TanStack · Performance', Icon: IconZap },
 ]
 
 const stats = [
   { num: '3+', sub: 'Years Experience' },
-  { num: '10+', sub: 'Projects Built' },
+  { num: '3', sub: 'Companies' },
   { num: 'Daily', sub: 'Learning' },
 ]
 
@@ -156,7 +154,6 @@ export default function About() {
   useEffect(() => {
     const ctx = gsap.context(() => {
 
-      // Image: scale + rotate reveal
       gsap.fromTo(imageRef.current,
         { opacity: 0, scale: 0.78, rotate: -6, y: 50 },
         {
@@ -166,7 +163,6 @@ export default function About() {
         }
       )
 
-      // Floating badges stagger in
       if (badgesRef.current) {
         gsap.fromTo(badgesRef.current.children,
           { opacity: 0, scale: 0.6 },
@@ -178,7 +174,6 @@ export default function About() {
         )
       }
 
-      // Text lines reveal
       gsap.fromTo(textRef.current.children,
         { opacity: 0, y: 40, clipPath: 'inset(0 0 100% 0)' },
         {
@@ -188,7 +183,6 @@ export default function About() {
         }
       )
 
-      // Cards spring in
       gsap.fromTo(cardsRef.current.children,
         { opacity: 0, y: 28, scale: 0.92 },
         {
@@ -198,7 +192,6 @@ export default function About() {
         }
       )
 
-      // Stats counter-like reveal
       gsap.fromTo(statsRef.current.children,
         { opacity: 0, y: 20 },
         {
@@ -207,7 +200,6 @@ export default function About() {
         }
       )
 
-      // Tag pills pop in
       gsap.fromTo(tagsRef.current.children,
         { opacity: 0, scale: 0.7 },
         {
@@ -253,13 +245,12 @@ export default function About() {
 
         <div className="grid lg:grid-cols-2 gap-20 items-start">
 
-          {/* ── LEFT — Image + cards ── */}
+          {/* LEFT — Image + cards */}
           <div>
 
             {/* Image + floating badges */}
             <div className="relative mb-10 w-fit">
 
-              {/* Glow ring behind image */}
               <div style={{
                 position: 'absolute', inset: '-18px', borderRadius: '32px',
                 background: 'radial-gradient(circle at 40% 40%, rgba(255,193,7,0.12), transparent 65%)',
@@ -267,7 +258,6 @@ export default function About() {
                 zIndex: 0,
               }} />
 
-              {/* Image wrapper */}
               <div
                 ref={imageRef}
                 className="about-image-wrap relative"
@@ -282,14 +272,12 @@ export default function About() {
                   animation: 'pulseRing 3s ease-out infinite',
                   position: 'relative',
                 }}>
-                  {/* ── REPLACE src with your actual image path ── */}
                   <img
                     src={about}
                     alt="Muthu Aravindh"
                     style={{ width: '100%', height: '100%', objectFit: 'cover', display: 'block' }}
                     onError={(e) => { e.currentTarget.style.display = 'none' }}
                   />
-                  {/* Fallback monogram shown if image fails */}
                   <div style={{
                     position: 'absolute', inset: 0,
                     display: 'flex', alignItems: 'center', justifyContent: 'center',
@@ -302,7 +290,6 @@ export default function About() {
                     MA
                   </div>
 
-                  {/* Inner overlay gradient */}
                   <div style={{
                     position: 'absolute', inset: 0,
                     background: 'linear-gradient(to top, rgba(2,2,8,0.55) 0%, transparent 50%)',
@@ -314,7 +301,7 @@ export default function About() {
               {/* Floating badges */}
               <div ref={badgesRef}>
 
-                {/* Years badge — bottom right */}
+                {/* Years badge */}
                 <div className="about-badge" style={{
                   position: 'absolute', bottom: -14, right: -20,
                   padding: '10px 16px', borderRadius: '16px',
@@ -341,7 +328,7 @@ export default function About() {
                   </div>
                 </div>
 
-                {/* Camera / Creative badge — top left */}
+                {/* Developer badge */}
                 <div className="about-badge" style={{
                   position: 'absolute', top: -16, left: -22,
                   padding: '8px 14px', borderRadius: '14px',
@@ -355,11 +342,11 @@ export default function About() {
                 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                     <span style={{ color: 'rgba(97,218,251,0.8)', display: 'flex' }}><IconCode /></span>
-                    <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 11, fontWeight: 600, color: 'rgba(97,218,251,0.8)', letterSpacing: '0.05em' }}>Developer</span>
+                    <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 11, fontWeight: 600, color: 'rgba(97,218,251,0.8)', letterSpacing: '0.05em' }}>Frontend Dev</span>
                   </div>
                 </div>
 
-                {/* Available badge — right middle */}
+                {/* Open to work badge */}
                 <div className="about-badge" style={{
                   position: 'absolute', top: '40%', right: -24,
                   padding: '7px 12px', borderRadius: '12px',
@@ -439,59 +426,62 @@ export default function About() {
             </div>
           </div>
 
-          {/* ── RIGHT — Bio ── */}
+          {/* RIGHT — Bio */}
           <div ref={textRef}>
 
-            {/* Heading */}
             <h2 style={{
               fontFamily: "'Space Grotesk', sans-serif", fontWeight: 800,
               fontSize: 'clamp(2rem, 3.5vw, 2.8rem)', color: '#e8e8f0',
               lineHeight: 1.15, marginBottom: '1.5rem',
             }}>
-              Frontend Developer
+              Frontend Developer{' '}
               <span style={{
                 background: 'linear-gradient(135deg, #ffd54f, #ffc107, #ff8f00)',
                 WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
                 backgroundClip: 'text',
               }}>focused on </span>
-              building modern web applications.
+              performance and scale.
             </h2>
 
             {/* Bio paragraphs */}
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.1rem' }}>
 
               <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.58)' }}>
-                I'm a Frontend Developer currently working at
-                <span style={{ color: '#ffc107', fontWeight: 600 }}> NDE (Now Digital Easy)</span> in Karur.
-                I have around 3 years of experience building web applications using modern frontend technologies.
+                I am a Frontend Developer with
+                <span style={{ color: '#ffc107', fontWeight: 600 }}> 3+ years of production experience</span> building enterprise-grade React applications. Currently at NDE, I independently architected and owned the complete frontend of a
+                <span style={{ color: '#ffc107', fontWeight: 600 }}> Google Workspace-style platform</span> covering Drive, Docs, Mail, Meet, and CRM modules with 15GB unified storage.
               </p>
 
               <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.58)' }}>
-                My primary stack includes
-                <span style={{ color: 'rgba(255,193,7,0.85)', fontWeight: 500 }}> React, TypeScript, Zustand, and Material UI</span>.
-                I work on building user interfaces, dashboards, and application features that focus on usability, maintainability, and performance.
+                My signature stack is
+                <span style={{ color: 'rgba(255,193,7,0.85)', fontWeight: 500 }}> React, Next.js, TanStack Query, TanStack Table, TanStack Virtual, Zustand, and shadcn/ui</span>. I focus on performance optimization, reusable component systems, and shipping clean maintainable UI at production quality.
               </p>
 
               <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.58)' }}>
-                Recently I have been improving my skills in modern frontend architecture, state management, and building scalable applications using tools like TanStack Query and modern React patterns.
+                At NDE I built a CRM handling
+                <span style={{ color: 'rgba(255,193,7,0.85)', fontWeight: 500 }}> 1,00,000+ records</span> with TanStack Table across 15+ screens, a real-time collaborative document editor with
+                <span style={{ color: 'rgba(255,193,7,0.85)', fontWeight: 500 }}> Lexical and Yjs CRDT</span>, and reduced DOM node count by 80% using TanStack Virtual on large datasets.
               </p>
 
               <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.58)' }}>
-                Outside of work, I also enjoy photography through my project
-                <span style={{ color: 'rgba(97,218,251,0.85)', fontWeight: 500 }}> mad.shot.diary</span>,
-                which helps me develop a strong eye for visual design and creativity.
+                Outside of code, I run a photography brand called
+                <span style={{ color: 'rgba(97,218,251,0.85)', fontWeight: 500 }}> mad.shot.diary</span> — cinematic portrait and couple shoots that sharpen my eye for visual detail and design.
               </p>
 
             </div>
 
             {/* Tech tags */}
             <div ref={tagsRef} style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: '1.8rem' }}>
-              {['React', 'TypeScript', 'Next.js', 'Zustand', 'MUI', 'TanStack', 'GSAP', 'Framer Motion', 'Three.js', 'Figma'].map(tag => (
+              {[
+                'React', 'Next.js', 'TypeScript', 'TanStack Query',
+                'TanStack Table', 'TanStack Virtual', 'Zustand',
+                'shadcn/ui', 'Tailwind CSS', 'WebSocket', 'Yjs CRDT', 'Figma'
+              ].map(tag => (
                 <span key={tag} className="tag-pill">{tag}</span>
               ))}
             </div>
 
-            {/* Divider + CTA */}
+            {/* CTA */}
             <div style={{ marginTop: '2rem', paddingTop: '2rem', borderTop: '1px solid rgba(255,193,7,0.1)', display: 'flex', alignItems: 'center', gap: 20, flexWrap: 'wrap' }}>
               <a
                 href="mailto:muthuaravindh2512001@gmail.com"
@@ -514,7 +504,7 @@ export default function About() {
 
               <a
                 href={resume}
-                download="Muthu_Aravindh_Resume.pdf"
+                download="Muthu_Aravindh_React_Developer.pdf"
                 data-cursor-hover
                 style={{
                   display: 'inline-flex', alignItems: 'center', gap: 7,
