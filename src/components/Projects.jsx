@@ -75,6 +75,23 @@ const projects = [
   },
 
   {
+    title: 'MUI Logistics Dashboard — UI Template',
+    description:
+      'Professional logistics SaaS dashboard template built with Material UI v6, React, and Zustand. Ships with a fully functional Kanban board via dnd-kit, interactive maps via Leaflet, and a file management module — all wrapped in a polished dark/light mode UI with switchable accent colors, optimized client-side routing, and a clean component architecture ready to plug into any backend.',
+
+    tech: ['React', 'Material UI v6', 'Zustand v5', 'React Router v6', '@dnd-kit/core', 'Leaflet', 'CSS Variables'],
+
+    gradient: 'linear-gradient(135deg, #1565C0 0%, #0288D1 60%, #00ACC1 100%)',
+    accent: '#0288D1',
+
+    github: null,
+    live: 'https://logisticsdashboard.vercel.app/login',
+
+    featured: true,
+    label: 'Template · $8 · Available Now',
+  },
+
+  {
     title: 'Real-Time Chat App',
     description:
       'Full-stack chat application with real-time bidirectional messaging via Socket.io, JWT authentication, paginated chat history via indexed MongoDB queries, and optimistic UI updates using Next.js App Router.',
