@@ -6,7 +6,7 @@ export const PERSONAL = {
   firstName: "Muthu",
   lastName: "Aravindh",
 
-  role: "Frontend Developer (React)",
+  role: "Frontend Developer (React) ",
 
   tagline:
     "Frontend Developer with 3+ years of experience building scalable and responsive web applications using React, TypeScript, and modern UI technologies.",
@@ -25,8 +25,6 @@ export const PERSONAL = {
 }
 
 // ─── SKILLS ──────────────────────────────────────────────────────────────────
-// icon strings map to ICON_MAP in Skills.jsx
-// color = brand hex for glow / icon tint
 
 export const SKILLS = [
   // ── Core ─────────────────────────────────────────────────
