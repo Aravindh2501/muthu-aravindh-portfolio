@@ -463,10 +463,10 @@ export default function About() {
                 <span style={{ color: 'rgba(255,193,7,0.85)', fontWeight: 500 }}> Lexical and Yjs CRDT</span>, and reduced DOM node count by 80% using TanStack Virtual on large datasets.
               </p>
 
-              <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.58)' }}>
+              {/* <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.58)' }}>
                 Outside of code, I run a photography brand called
                 <span style={{ color: 'rgba(97,218,251,0.85)', fontWeight: 500 }}> mad.shot.diary</span> — cinematic portrait and couple shoots that sharpen my eye for visual detail and design.
-              </p>
+              </p> */}
 
             </div>
 
