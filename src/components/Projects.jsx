@@ -9,135 +9,96 @@ const projects = [
   {
     title: 'NDE Drive — File Management System',
     description:
-      'Enterprise file management interface built as part of a Google Workspace-style platform. Supports nested folder hierarchies, full CRUD, multi-select, bulk operations, and real-time sync across concurrent sessions via WebSocket.',
-
+      'Enterprise file management interface built as part of a Google Workspace-style platform. Supports nested folder hierarchies, full CRUD, multi-select, bulk operations, and real-time sync across concurrent sessions via WebSocket. Used TanStack Virtual to cut DOM node count by 80% and TanStack Query useInfiniteQuery for paginated loading.',
     tech: ['React', 'TanStack Query', 'TanStack Virtual', 'Atlassian DnD', 'Zustand', 'Material UI', 'WebSocket'],
-
     gradient: 'linear-gradient(135deg, #667eea 0%, #764ba2 100%)',
     accent: '#667eea',
-
     github: null,
     live: null,
-
     featured: true,
     label: 'Production · Enterprise Platform',
   },
-
   {
     title: 'NDE CRM — Dashboard & Kanban Pipeline',
     description:
-      'Full CRM frontend with a reusable TanStack Table component across 15+ screens handling 1,00,000+ records, Kanban pipeline board with drag-and-drop deal cards, and per-user column preferences persisted to backend.',
-
+      'Full CRM frontend with a reusable TanStack Table component across 15+ screens handling 1,00,000+ records with sorting, filtering, column pinning, drag-and-drop reordering and bulk actions. Includes a Kanban pipeline board and per-user column preferences persisted to backend with no flicker on reload.',
     tech: ['React', 'TanStack Table', 'TanStack Query', 'Zustand', 'Material UI', 'REST APIs'],
-
     gradient: 'linear-gradient(135deg, #43e97b 0%, #38f9d7 100%)',
     accent: '#43e97b',
-
     github: null,
     live: null,
-
     featured: true,
     label: 'Production · CRM',
   },
-
   {
     title: 'NDE Docs — Collaborative Editor',
     description:
       'Rich-text collaborative document editor built with Lexical (Meta) and Yjs CRDT over WebSocket. Multiple users can write simultaneously with zero data loss or overwrite conflicts in real time.',
-
     tech: ['React', 'Lexical', 'Yjs CRDT', 'WebSocket', 'Material UI'],
-
     gradient: 'linear-gradient(135deg, #f7971e 0%, #ffd200 100%)',
     accent: '#ffd200',
-
     github: null,
     live: null,
-
     featured: true,
     label: 'Production · Docs Module',
   },
-
+  {
+    title: 'Chatty — Real-Time Chat App',
+    description:
+      'Full-stack MERN chat app with MVC-structured Express backend. JWT authentication stored in httpOnly cookies with bcrypt (salt round 10). Socket.io real-time layer with dual-key Map room management, message delivery status (sent to delivered to read), typing indicators, online/offline presence and Cloudinary image uploads.',
+    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Socket.io', 'JWT', 'bcrypt', 'Cloudinary', 'Tailwind CSS'],
+    gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
+    accent: '#4facfe',
+    github: 'https://github.com/Aravindh2501/Chatty-chat',
+    live: 'https://chattychat-app.netlify.app',
+    featured: true,
+    label: 'Full Stack · MERN',
+  },
   {
     title: 'MAVX Studio CRM',
     description:
-      'SaaS studio management platform for photography businesses built as a pnpm monorepo. Covers lead pipeline, Kanban board, client management, and payment tracking with a Prisma schema spanning 13+ models.',
-
-    tech: ['Next.js 15', 'Supabase', 'Prisma', 'TanStack Query v5', 'Zustand v5', 'Tailwind CSS'],
-
+      'Multi-tenant SaaS platform for photography studios built as a pnpm monorepo. Covers lead pipeline, Kanban board, client management and payment tracking. Prisma schema with 13+ models, Supabase Auth with Row Level Security, TanStack Query v5 with optimistic updates and Zustand v5 with domain-sliced stores.',
+    tech: ['Next.js 15', 'Supabase', 'Prisma', 'PostgreSQL', 'TanStack Query v5', 'Zustand v5', 'Tailwind CSS v4'],
     gradient: 'linear-gradient(135deg, #f093fb 0%, #f5576c 100%)',
     accent: '#f093fb',
-
     github: 'https://github.com/Aravindh2501',
     live: null,
-
     featured: true,
     label: 'Personal SaaS Project',
   },
-
+  {
+    title: 'File Preview Package',
+    description:
+      'Internal React package for previewing PDF, image, Excel and video files. Uses SheetJS to parse Excel files client-side and renders data in a virtualized grid with TanStack Virtual handling 1,00,000+ rows without browser freeze. Includes annotation and draw mode with a Zustand-backed comment drawer.',
+    tech: ['React', 'TypeScript', 'Zustand', 'PDF.js', 'SheetJS', 'TanStack Virtual'],
+    gradient: 'linear-gradient(135deg, #f7971e 0%, #ffd200 100%)',
+    accent: '#f7971e',
+    github: null,
+    live: null,
+    featured: false,
+    label: 'Internal Package',
+  },
   {
     title: 'MUI Logistics Dashboard — UI Template',
     description:
-      'Professional logistics SaaS dashboard template built with Material UI v6, React, and Zustand. Ships with a fully functional Kanban board via dnd-kit, interactive maps via Leaflet, and a file management module — all wrapped in a polished dark/light mode UI with switchable accent colors, optimized client-side routing, and a clean component architecture ready to plug into any backend.',
-
+      'Professional logistics SaaS dashboard template built with Material UI v6, React and Zustand. Ships with a Kanban board via dnd-kit, interactive maps via Leaflet, file management module, dark/light mode with switchable accent colors and clean component architecture.',
     tech: ['React', 'Material UI v6', 'Zustand v5', 'React Router v6', '@dnd-kit/core', 'Leaflet', 'CSS Variables'],
-
     gradient: 'linear-gradient(135deg, #1565C0 0%, #0288D1 60%, #00ACC1 100%)',
     accent: '#0288D1',
-
     github: null,
     live: 'https://logisticsdashboard.vercel.app/login',
-
-    featured: true,
-    label: 'Template · $8 · Available Now',
-  },
-
-  {
-    title: 'Real-Time Chat App',
-    description:
-      'Full-stack chat application with real-time bidirectional messaging via Socket.io, JWT authentication, paginated chat history via indexed MongoDB queries, and optimistic UI updates using Next.js App Router.',
-
-    tech: ['Next.js', 'Express.js', 'MongoDB', 'Socket.io', 'shadcn/ui', 'JWT'],
-
-    gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
-    accent: '#4facfe',
-
-    github: 'https://github.com/Aravindh2501',
-    live: null,
-
     featured: false,
-    label: 'Full Stack Project',
+    label: 'Template · Available Now',
   },
-
-  {
-    title: 'Spin Wheel Giveaway Tool',
-    description:
-      'Interactive spin wheel tool for Instagram giveaways. Supports importing participant data from Excel files and selecting random winners with smooth canvas animations.',
-
-    tech: ['React', 'Tailwind CSS', 'XLSX Parser', 'HTML5 Canvas'],
-
-    gradient: 'linear-gradient(135deg, #a18cd1 0%, #fbc2eb 100%)',
-    accent: '#a18cd1',
-
-    github: 'https://github.com/Aravindh2501',
-    live: 'https://madshot-studio.netlify.app',
-
-    featured: false,
-    label: 'Web Tool',
-  },
-
   {
     title: 'Smart Expense Manager',
     description:
-      'Mobile expense tracking application built with React Native and Expo. Allows users to track daily expenses, categorize transactions, and view spending summaries with multi-theme support.',
-
+      'Mobile expense tracking application built with React Native and Expo. Allows users to track daily expenses, categorize transactions and view spending summaries with multi-theme support.',
     tech: ['React Native', 'TypeScript', 'SQLite', 'Expo'],
-
     gradient: 'linear-gradient(135deg, #fa709a 0%, #fee140 100%)',
     accent: '#fa709a',
-
     github: 'https://github.com/Aravindh2501',
-    // live: 'https://expo.dev/accounts/aravindh_2501/projects/MyApp/builds/6123254d-35a0-468d-8b7c-e85717ca5d1d',
-
+    live: null,
     featured: false,
     label: 'Mobile Project',
   },
@@ -154,13 +115,7 @@ function ProjectCard({ project, index }) {
     const y = (e.clientY - rect.top) / rect.height
     const rotateX = (y - 0.5) * -10
     const rotateY = (x - 0.5) * 10
-
-    gsap.to(card, {
-      rotateX, rotateY, z: 20,
-      duration: 0.4, ease: 'power2.out',
-      transformPerspective: 1000,
-    })
-
+    gsap.to(card, { rotateX, rotateY, z: 20, duration: 0.4, ease: 'power2.out', transformPerspective: 1000 })
     const spotlight = card.querySelector('.card-spotlight')
     if (spotlight) {
       spotlight.style.background = `radial-gradient(circle at ${x * 100}% ${y * 100}%, ${project.accent}20, transparent 60%)`
@@ -168,10 +123,7 @@ function ProjectCard({ project, index }) {
   }
 
   const handleMouseLeave = () => {
-    gsap.to(cardRef.current, {
-      rotateX: 0, rotateY: 0, z: 0,
-      duration: 0.8, ease: 'elastic.out(1, 0.4)',
-    })
+    gsap.to(cardRef.current, { rotateX: 0, rotateY: 0, z: 0, duration: 0.8, ease: 'elastic.out(1, 0.4)' })
   }
 
   return (
@@ -193,115 +145,53 @@ function ProjectCard({ project, index }) {
       }}
       data-cursor-hover
     >
-      {/* Spotlight effect */}
       <div className="card-spotlight absolute inset-0 pointer-events-none z-0 transition-all duration-200" />
-
-      {/* Header gradient bar */}
-      <div
-        className="h-40 relative overflow-hidden"
-        style={{ background: project.gradient }}
-      >
-        <div
-          className="absolute inset-0"
-          style={{
-            background: 'url("data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23ffffff\' fill-opacity=\'0.07\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E")',
-          }}
-        />
-
-        <div
-          className="absolute top-4 right-4 font-display font-bold text-5xl opacity-20"
-          style={{ color: 'white', userSelect: 'none' }}
-        >
+      <div className="h-40 relative overflow-hidden" style={{ background: project.gradient }}>
+        <div className="absolute inset-0" style={{ background: "url(\"data:image/svg+xml,%3Csvg width='60' height='60' viewBox='0 0 60 60' xmlns='http://www.w3.org/2000/svg'%3E%3Cg fill='none' fill-rule='evenodd'%3E%3Cg fill='%23ffffff' fill-opacity='0.07'%3E%3Cpath d='M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E\")" }} />
+        <div className="absolute top-4 right-4 font-display font-bold text-5xl opacity-20" style={{ color: 'white', userSelect: 'none' }}>
           {String(index + 1).padStart(2, '0')}
         </div>
-
         <div className="absolute bottom-4 left-4">
-          <span
-            className="px-3 py-1 rounded-full font-mono text-xs"
-            style={{
-              background: 'rgba(0,0,0,0.4)',
-              backdropFilter: 'blur(10px)',
-              color: 'rgba(255,255,255,0.8)',
-              border: '1px solid rgba(255,255,255,0.15)',
-            }}
-          >
+          <span className="px-3 py-1 rounded-full font-mono text-xs" style={{ background: 'rgba(0,0,0,0.4)', backdropFilter: 'blur(10px)', color: 'rgba(255,255,255,0.8)', border: '1px solid rgba(255,255,255,0.15)' }}>
             {project.label}
           </span>
         </div>
       </div>
-
-      {/* Content */}
       <div className="p-6 relative z-10">
-        <h3
-          className="font-display font-bold text-xl mb-3"
-          style={{ color: '#e8e8f0' }}
-        >
+        <h3 className="font-display font-bold text-xl mb-3" style={{ color: '#e8e8f0' }}>
           {project.title}
         </h3>
-
-        <p
-          className="font-body text-sm leading-relaxed mb-5"
-          style={{ color: 'rgba(255,255,255,0.5)', minHeight: '4.5rem' }}
-        >
+        <p className="font-body text-sm leading-relaxed mb-5" style={{ color: 'rgba(255,255,255,0.5)', minHeight: '4.5rem' }}>
           {project.description}
         </p>
-
-        {/* Tech stack */}
         <div className="flex flex-wrap gap-1.5 mb-6">
           {project.tech.map(t => (
-            <span
-              key={t}
-              className="px-2.5 py-1 rounded-lg font-mono text-xs"
-              style={{
-                background: 'rgba(255,255,255,0.05)',
-                border: '1px solid rgba(255,255,255,0.08)',
-                color: 'rgba(255,255,255,0.45)',
-              }}
-            >
+            <span key={t} className="px-2.5 py-1 rounded-lg font-mono text-xs" style={{ background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.08)', color: 'rgba(255,255,255,0.45)' }}>
               {t}
             </span>
           ))}
         </div>
-
-        {/* Buttons */}
         <div className="flex gap-3">
           {project.live && (
-            <a
-              href={project.live}
-              target="_blank"
-              rel="noopener noreferrer"
+            <a href={project.live} target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-display font-semibold transition-all duration-300"
-              style={{
-                background: `linear-gradient(135deg, ${project.accent}cc, ${project.accent}88)`,
-                color: 'white',
-                cursor: 'none',
-              }}
-              data-cursor-hover
-            >
+              style={{ background: `linear-gradient(135deg, ${project.accent}cc, ${project.accent}88)`, color: 'white', cursor: 'none' }}
+              data-cursor-hover>
               <FiExternalLink size={13} />
               Live Demo
             </a>
           )}
-          {/* {project.github && (
-            <a
-              href={project.github}
-              target="_blank"
-              rel="noopener noreferrer"
+          {project.github && (
+            <a href={project.github} target="_blank" rel="noopener noreferrer"
               className="flex items-center gap-2 px-4 py-2 rounded-xl text-xs font-display font-semibold transition-all duration-300"
-              style={{
-                background: 'rgba(255,255,255,0.06)',
-                border: '1px solid rgba(255,255,255,0.1)',
-                color: 'rgba(255,255,255,0.6)',
-                cursor: 'none',
-              }}
+              style={{ background: 'rgba(255,255,255,0.06)', border: '1px solid rgba(255,255,255,0.1)', color: 'rgba(255,255,255,0.6)', cursor: 'none' }}
               onMouseEnter={e => e.currentTarget.style.color = '#fff'}
               onMouseLeave={e => e.currentTarget.style.color = 'rgba(255,255,255,0.6)'}
-              data-cursor-hover
-            >
+              data-cursor-hover>
               <FiGithub size={13} />
               GitHub
             </a>
-          )} */}
+          )}
         </div>
       </div>
     </div>
@@ -317,49 +207,33 @@ export default function Projects() {
     const ctx = gsap.context(() => {
       gsap.fromTo(headingRef.current.children,
         { opacity: 0, y: 40 },
-        {
-          opacity: 1, y: 0, duration: 1, stagger: 0.1,
-          ease: 'power3.out',
-          scrollTrigger: { trigger: headingRef.current, start: 'top 80%' }
-        }
+        { opacity: 1, y: 0, duration: 1, stagger: 0.1, ease: 'power3.out', scrollTrigger: { trigger: headingRef.current, start: 'top 80%' } }
       )
-
       const cards = gridRef.current.children
       gsap.fromTo(cards,
         { opacity: 0, y: 60, scale: 0.95 },
-        {
-          opacity: 1, y: 0, scale: 1,
-          duration: 0.8, stagger: 0.1,
-          ease: 'power3.out',
-          scrollTrigger: { trigger: gridRef.current, start: 'top 80%' }
-        }
+        { opacity: 1, y: 0, scale: 1, duration: 0.8, stagger: 0.1, ease: 'power3.out', scrollTrigger: { trigger: gridRef.current, start: 'top 80%' } }
       )
     }, sectionRef)
-
     return () => ctx.revert()
   }, [])
 
   return (
     <div ref={sectionRef} className="section-padding relative">
       <div className="container-custom">
-        {/* Section label */}
         <div className="flex items-center gap-4 mb-16">
-          <span className="font-mono text-xs tracking-widest uppercase" style={{ color: 'rgba(255,193,7,0.5)' }}>
-            04 / Projects
-          </span>
+          <span className="font-mono text-xs tracking-widest uppercase" style={{ color: 'rgba(255,193,7,0.5)' }}>04 / Projects</span>
           <div className="flex-1 h-px" style={{ background: 'linear-gradient(90deg, rgba(255,193,7,0.3), transparent)' }} />
         </div>
-
         <div ref={headingRef} className="mb-16">
           <h2 className="font-display font-bold mb-4" style={{ fontSize: 'clamp(2rem, 4vw, 3rem)', color: '#e8e8f0' }}>
             Things I've{' '}
             <span className="gold-gradient-text">shipped</span>
           </h2>
           <p className="font-body text-base max-w-xl" style={{ color: 'rgba(255,255,255,0.45)' }}>
-            A selection of projects that reflect my obsession with clean architecture, performance, and meaningful UI.
+            A selection of projects that reflect my focus on clean architecture, performance and meaningful UI.
           </p>
         </div>
-
         <div ref={gridRef} className="grid md:grid-cols-2 lg:grid-cols-3 gap-5">
           {projects.map((project, i) => (
             <ProjectCard key={project.title} project={project} index={i} />

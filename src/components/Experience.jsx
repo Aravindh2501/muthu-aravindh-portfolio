@@ -4,7 +4,6 @@ import { ScrollTrigger } from 'gsap/ScrollTrigger'
 
 gsap.registerPlugin(ScrollTrigger)
 
-// ── Icons ─────────────────────────────────────────────────────────────────────
 const IconCheck = () => (
   <svg width="9" height="9" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="3" strokeLinecap="round" strokeLinejoin="round">
     <polyline points="20 6 9 17 4 12"/>
@@ -24,7 +23,6 @@ const IconPin = () => (
   </svg>
 )
 
-// ── Data ──────────────────────────────────────────────────────────────────────
 const experiences = [
   {
     id: 'nde',
@@ -36,35 +34,24 @@ const experiences = [
     current: true,
     accent: '#ffc107',
     logo: 'NDE',
-
     summary:
-      'Independently architected and owned the complete frontend of a Google Workspace-style enterprise platform covering Drive, Docs, Mail, Meet, and CRM modules with 15GB unified storage. Made all frontend decisions solo with no senior oversight.',
-
+      'Sole frontend owner of a Google Workspace-style platform covering Drive, Docs and CRM with 15GB unified storage and pipelines handling 1,00,000+ records across 15+ screens. Worked in an Agile Scrum team with two-week sprints, daily standups and regular code reviews with no senior oversight.',
     bullets: [
-      'Architected a scalable file management interface as part of a 15GB unified storage system shared across Drive, Mail, Meet, and Chat modules without UI degradation or scroll lag.',
-      'Implemented TanStack Virtual for list virtualization, cutting DOM node count by ~80% on large datasets and eliminating scroll jank completely on low-end devices.',
-      'Built a rich-text collaborative document editor using Lexical (Meta) with Yjs CRDT and WebSocket for conflict-free real-time editing across multiple users simultaneously.',
-      'Built a fully configurable reusable TanStack Table component across all CRM pages with multi-column sorting, filtering, column pinning, drag-and-drop reordering, and bulk actions handling 1,00,000+ records.',
-      'Developed a Kanban pipeline board with drag-and-drop deal cards and real-time stage counters for visual sales pipeline management.',
-      'Built a centralized MUI theme system with full component overrides, semantic color tokens, dark/light mode — a single config change propagates across the entire product UI.',
+      'Built a file management interface with nested folder hierarchies, full CRUD, multi-select and bulk actions as part of a 15GB unified storage system shared across Drive, Mail, Meet and Chat without UI performance issues.',
+      'Used TanStack Virtual to reduce DOM node count by 80% on large datasets and TanStack Query useInfiniteQuery for paginated loading to remove unnecessary API calls on page load.',
+      'Added WebSocket for real-time file and folder sync and built drag-and-drop across nested structures using Atlassian Pragmatic DnD with proper state cleanup on every drop.',
+      'Fixed re-renders across component trees using useMemo, useCallback and React.memo which reduced CPU usage on data-heavy screens.',
+      'Built a collaborative rich-text editor using Lexical (Meta) with Yjs CRDT and a WebSocket provider so multiple users can edit the same document simultaneously without conflicts or data loss.',
+      'Built a reusable TanStack Table component across all CRM screens with sorting, filtering, pagination, column pinning, resizing, drag-and-drop reordering and bulk actions handling 1,00,000+ records.',
+      'Built a Kanban pipeline board for sales teams and an API-driven column visibility feature that saves each user\'s preferences to the backend and restores them on reload with no flicker.',
+      'Created a centralized MUI theme system with component overrides, color tokens, typography scale and dark/light mode so a single config change updates the entire product UI.',
     ],
-
     stack: [
-      'React',
-      'TypeScript',
-      'Next.js',
-      'TanStack Query',
-      'TanStack Table',
-      'TanStack Virtual',
-      'Zustand',
-      'Material UI',
-      'WebSocket',
-      'Yjs CRDT',
-      'Lexical',
-      'Atlassian DnD',
+      'React', 'TypeScript', 'Next.js', 'TanStack Query', 'TanStack Table',
+      'TanStack Virtual', 'Zustand', 'Material UI', 'WebSocket', 'Yjs CRDT',
+      'Lexical', 'Atlassian DnD', 'Agile', 'Scrum',
     ],
   },
-
   {
     id: 'kodukku',
     company: 'Kodukku Classifieds Pvt. Ltd.',
@@ -75,28 +62,19 @@ const experiences = [
     current: false,
     accent: '#00f0ff',
     logo: 'KCL',
-
     summary:
-      'Led frontend architecture as the founding frontend developer, defining component structure, folder organization, and coding standards for the entire codebase from scratch across a classifieds marketplace and internal HRMS.',
-
+      'Joined as the first frontend developer and set up the entire codebase from scratch including component structure, folder organization and coding conventions.',
     bullets: [
-      'Built a classifieds marketplace UI using Material UI and TanStack Query for server state, caching, and background sync, reducing redundant network calls through smart cache invalidation.',
-      'Developed an internal HRMS covering employee attendance tracking, dynamic payslip generation with PDF export, and role-based access control for Admin, Manager, and Employee roles.',
-      'Managed application state using Redux Toolkit with normalized data structures for scalable, predictable data flow across modules.',
-      'Defined component architecture, folder structure, and coding standards for the entire frontend codebase from scratch as the founding frontend developer.',
+      'Built a real-time chat UI using React and Socket.io-client with room-based messaging, typing indicators and online presence tracking without page refresh.',
+      'Built an internal HRMS with attendance tracking, payslip generation with PDF export and role-based access control for Admin, Manager and Employee roles.',
+      'Built a classifieds marketplace UI using Material UI and TanStack Query for server state, caching and background sync, reducing redundant network calls.',
+      'Used Redux Toolkit for global state management and TanStack Query for server-state caching and background sync to reduce redundant API calls.',
     ],
-
     stack: [
-      'React',
-      'TanStack Query',
-      'Redux Toolkit',
-      'Material UI',
-      'REST APIs',
-      'React Router',
-      'Axios',
+      'React', 'Socket.io-client', 'TanStack Query', 'Redux Toolkit',
+      'Material UI', 'REST APIs', 'React Router', 'Axios',
     ],
   },
-
   {
     id: 'enrich',
     company: 'Enrich Money',
@@ -107,29 +85,19 @@ const experiences = [
     current: false,
     accent: '#cc66ff',
     logo: 'EM',
-
     summary:
-      'Worked as a UI developer building pixel-accurate interfaces and HTML email templates for a financial trading platform alongside the development team.',
-
+      'Built responsive UI components and HTML email templates for a financial trading platform working alongside Angular developers on pixel-accurate design implementation.',
     bullets: [
-      'Built responsive UI components and styling using SASS and Material UI for a financial trading platform, working on pixel-accurate design implementation.',
-      'Developed HTML email templates using fixed 600px table-based layouts with inline styles for cross-client compatibility across Gmail, Outlook, and Apple Mail.',
-      'Identified and resolved cross-browser compatibility bugs across Chrome, Firefox, Safari, and Edge, improving frontend stability and reducing QA-reported issues.',
+      'Built responsive UI components using SASS and Material UI for a financial trading platform working alongside Angular developers to match designs pixel-accurately.',
+      'Built HTML email templates using 600px fixed table layouts with inline styles for consistent rendering across Gmail, Outlook and Apple Mail.',
+      'Found and fixed cross-browser bugs across Chrome, Firefox, Safari and Edge which reduced QA-reported frontend issues.',
     ],
-
     stack: [
-      'HTML5',
-      'CSS3',
-      'SASS',
-      'Material UI',
-      'HTML Email',
-      'Responsive Design',
+      'HTML5', 'CSS3', 'SASS', 'Material UI', 'HTML Email', 'Responsive Design',
     ],
   },
 ]
 
-
-// ── Styles ────────────────────────────────────────────────────────────────────
 const STYLES = `
   @keyframes dotPulse {
     0%, 100% { box-shadow: 0 0 0 0 rgba(255,193,7,0.6), 0 0 20px rgba(255,193,7,0.6); }
@@ -140,11 +108,7 @@ const STYLES = `
     background: rgba(255, 255, 255, 0.04);
     backdrop-filter: blur(20px);
     overflow: hidden;
-    transition:
-      border-color 0.35s ease,
-      box-shadow 0.4s ease,
-      background-color 0.4s ease,
-      transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
+    transition: border-color 0.35s ease, box-shadow 0.4s ease, background-color 0.4s ease, transform 0.4s cubic-bezier(0.34, 1.56, 0.64, 1);
     will-change: transform, box-shadow;
   }
   .bullet-item {
@@ -166,7 +130,6 @@ const STYLES = `
   }
 `
 
-// ── Card body ─────────────────────────────────────────────────────────────────
 function CardBody({ exp }) {
   return (
     <div
@@ -185,13 +148,11 @@ function CardBody({ exp }) {
         e.currentTarget.style.transform = 'translateY(0) scale(1)'
       }}
     >
-      {/* Header */}
       <div style={{
         padding: '20px 24px 16px',
         background: `linear-gradient(135deg, ${exp.accent}25 0%, transparent 70%)`,
         borderBottom: `1px solid ${exp.accent}1a`,
       }}>
-        {/* Top row */}
         <div style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', gap: 10, marginBottom: 12, flexWrap: 'wrap' }}>
           <div style={{
             padding: '4px 12px', borderRadius: '8px',
@@ -202,66 +163,36 @@ function CardBody({ exp }) {
           }}>
             {exp.logo}
           </div>
-
           <div style={{ display: 'flex', alignItems: 'center', gap: 8 }}>
             {exp.current && (
               <span style={{
                 padding: '3px 10px', borderRadius: '999px',
-                background: 'rgba(34,197,94,0.2)',
-                border: '1px solid rgba(34,197,94,0.7)',
+                background: 'rgba(34,197,94,0.2)', border: '1px solid rgba(34,197,94,0.7)',
                 fontFamily: "'Space Grotesk', sans-serif",
                 fontSize: 10, fontWeight: 700, letterSpacing: '0.12em',
                 color: '#4ade80', textTransform: 'uppercase',
                 boxShadow: '0 0 10px rgba(34,197,94,0.3)',
               }}>● Live</span>
             )}
-            <span style={{
-              fontFamily: "'Space Grotesk', sans-serif",
-              fontSize: 12, fontWeight: 600, letterSpacing: '0.05em',
-              color: 'rgba(255,255,255,0.7)',
-            }}>
+            <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 12, fontWeight: 600, letterSpacing: '0.05em', color: 'rgba(255,255,255,0.7)' }}>
               {exp.period}
             </span>
           </div>
         </div>
-
-        {/* Role & company */}
-        <h3 style={{
-          fontFamily: "'Space Grotesk', sans-serif", fontWeight: 800,
-          fontSize: '1.1rem', color: '#ffffff', margin: '0 0 4px', lineHeight: 1.2,
-          textShadow: '0 2px 10px rgba(0,0,0,0.5)',
-        }}>
+        <h3 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 800, fontSize: '1.1rem', color: '#ffffff', margin: '0 0 4px', lineHeight: 1.2, textShadow: '0 2px 10px rgba(0,0,0,0.5)' }}>
           {exp.role}
         </h3>
-        <div style={{
-          fontFamily: "'Space Grotesk', sans-serif",
-          fontSize: 14,
-          fontWeight: 700,
-          color: exp.accent,
-          marginBottom: 12,
-          textShadow: `0 0 8px ${exp.accent}40`
-        }}>
+        <div style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 14, fontWeight: 700, color: exp.accent, marginBottom: 12, textShadow: `0 0 8px ${exp.accent}40` }}>
           {exp.company}
         </div>
-
-        {/* Meta */}
         <div style={{ display: 'flex', gap: 16, flexWrap: 'wrap', marginBottom: 14 }}>
           <span className="meta-pill"><IconCalendar />{exp.type}</span>
           <span className="meta-pill"><IconPin />{exp.location}</span>
         </div>
-
-        {/* Summary */}
-        <p style={{
-          fontFamily: "'DM Sans', sans-serif", fontSize: '0.88rem',
-          lineHeight: 1.65, color: 'rgba(255,255,255,0.75)',
-          margin: 0, paddingLeft: 12,
-          borderLeft: `3px solid ${exp.accent}`,
-        }}>
+        <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '0.88rem', lineHeight: 1.65, color: 'rgba(255,255,255,0.75)', margin: 0, paddingLeft: 12, borderLeft: `3px solid ${exp.accent}` }}>
           {exp.summary}
         </p>
       </div>
-
-      {/* Bullets */}
       <div style={{ padding: '16px 20px' }}>
         {exp.bullets.map((b, i) => (
           <div key={i} className="bullet-item">
@@ -278,28 +209,23 @@ function CardBody({ exp }) {
             </span>
           </div>
         ))}
-
-        {/* Stack chips */}
-        <div style={{
-          display: 'flex', flexWrap: 'wrap', gap: 8,
-          marginTop: 16, paddingTop: 16, borderTop: `1px solid rgba(255,255,255,0.08)`,
-        }}>
+        <div style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: 16, paddingTop: 16, borderTop: `1px solid rgba(255,255,255,0.08)` }}>
           {exp.stack.map(tag => (
             <span
               key={tag}
               className="stack-chip"
               style={{ background: 'rgba(255,255,255,0.05)', border: `1px solid rgba(255,255,255,0.15)`, color: 'rgba(255,255,255,0.85)' }}
               onMouseEnter={e => {
-                e.currentTarget.style.background = `${exp.accent}25`;
-                e.currentTarget.style.color = '#ffffff';
-                e.currentTarget.style.borderColor = exp.accent;
-                e.currentTarget.style.boxShadow = `0 0 10px ${exp.accent}40`;
+                e.currentTarget.style.background = `${exp.accent}25`
+                e.currentTarget.style.color = '#ffffff'
+                e.currentTarget.style.borderColor = exp.accent
+                e.currentTarget.style.boxShadow = `0 0 10px ${exp.accent}40`
               }}
               onMouseLeave={e => {
-                e.currentTarget.style.background = 'rgba(255,255,255,0.05)';
-                e.currentTarget.style.color = 'rgba(255,255,255,0.85)';
-                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)';
-                e.currentTarget.style.boxShadow = 'none';
+                e.currentTarget.style.background = 'rgba(255,255,255,0.05)'
+                e.currentTarget.style.color = 'rgba(255,255,255,0.85)'
+                e.currentTarget.style.borderColor = 'rgba(255,255,255,0.15)'
+                e.currentTarget.style.boxShadow = 'none'
               }}
             >
               {tag}
@@ -311,7 +237,6 @@ function CardBody({ exp }) {
   )
 }
 
-// ── Timeline row (alternating) ────────────────────────────────────────────────
 function TimelineRow({ exp, index }) {
   const leftRef = useRef()
   const rightRef = useRef()
@@ -322,74 +247,36 @@ function TimelineRow({ exp, index }) {
     const cardEl = isLeft ? leftRef.current : rightRef.current
     gsap.fromTo(cardEl,
       { opacity: 0, x: isLeft ? -48 : 48, y: 16 },
-      {
-        opacity: 1, x: 0, y: 0, duration: 0.9, ease: 'expo.out',
-        delay: index * 0.08,
-        scrollTrigger: { trigger: cardEl, start: 'top 84%' },
-      }
+      { opacity: 1, x: 0, y: 0, duration: 0.9, ease: 'expo.out', delay: index * 0.08, scrollTrigger: { trigger: cardEl, start: 'top 84%' } }
     )
     gsap.fromTo(dotRef.current,
       { scale: 0, opacity: 0 },
-      {
-        scale: 1, opacity: 1, duration: 0.5, ease: 'back.out(3)',
-        delay: index * 0.08 + 0.18,
-        scrollTrigger: { trigger: cardEl, start: 'top 84%' },
-      }
+      { scale: 1, opacity: 1, duration: 0.5, ease: 'back.out(3)', delay: index * 0.08 + 0.18, scrollTrigger: { trigger: cardEl, start: 'top 84%' } }
     )
   }, [index, isLeft])
 
   return (
     <div style={{ display: 'grid', gridTemplateColumns: '1fr 56px 1fr', alignItems: 'start', marginBottom: 52 }}>
-
-      {/* Left card slot */}
       <div style={{ padding: '0 28px 0 0' }}>
         {isLeft ? (
-          <div ref={leftRef} style={{ opacity: 0 }}>
-            <CardBody exp={exp} />
-          </div>
+          <div ref={leftRef} style={{ opacity: 0 }}><CardBody exp={exp} /></div>
         ) : (
           <div ref={leftRef} style={{ textAlign: 'right', paddingTop: 14, opacity: 0 }}>
-            <span style={{
-              fontFamily: "'Space Grotesk', sans-serif",
-              fontSize: 13, fontWeight: 800, letterSpacing: '0.1em',
-              color: exp.accent, textTransform: 'uppercase',
-              textShadow: `0 0 10px ${exp.accent}50`,
-            }}>
+            <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 13, fontWeight: 800, letterSpacing: '0.1em', color: exp.accent, textTransform: 'uppercase', textShadow: `0 0 10px ${exp.accent}50` }}>
               {exp.period.split('—')[0].trim()}
             </span>
           </div>
         )}
       </div>
-
-      {/* Centre dot */}
       <div style={{ display: 'flex', justifyContent: 'center', paddingTop: 16, position: 'relative', zIndex: 2 }}>
-        <div
-          ref={dotRef}
-          style={{
-            width: 16, height: 16, borderRadius: '50%',
-            background: `#ffffff`,
-            border: `3px solid ${exp.accent}`,
-            opacity: 0,
-            animation: exp.current ? 'dotPulse 2.4s ease infinite' : 'none',
-            boxShadow: `0 0 15px 3px ${exp.accent}`,
-          }}
-        />
+        <div ref={dotRef} style={{ width: 16, height: 16, borderRadius: '50%', background: '#ffffff', border: `3px solid ${exp.accent}`, opacity: 0, animation: exp.current ? 'dotPulse 2.4s ease infinite' : 'none', boxShadow: `0 0 15px 3px ${exp.accent}` }} />
       </div>
-
-      {/* Right card slot */}
       <div style={{ padding: '0 0 0 28px' }}>
         {!isLeft ? (
-          <div ref={rightRef} style={{ opacity: 0 }}>
-            <CardBody exp={exp} />
-          </div>
+          <div ref={rightRef} style={{ opacity: 0 }}><CardBody exp={exp} /></div>
         ) : (
           <div ref={rightRef} style={{ paddingTop: 14, opacity: 0 }}>
-            <span style={{
-              fontFamily: "'Space Grotesk', sans-serif",
-              fontSize: 13, fontWeight: 800, letterSpacing: '0.1em',
-              color: exp.accent, textTransform: 'uppercase',
-              textShadow: `0 0 10px ${exp.accent}50`,
-            }}>
+            <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 13, fontWeight: 800, letterSpacing: '0.1em', color: exp.accent, textTransform: 'uppercase', textShadow: `0 0 10px ${exp.accent}50` }}>
               {exp.period.split('—')[0].trim()}
             </span>
           </div>
@@ -399,7 +286,6 @@ function TimelineRow({ exp, index }) {
   )
 }
 
-// ── Main ──────────────────────────────────────────────────────────────────────
 export default function Experience() {
   const sectionRef  = useRef()
   const headingRef  = useRef()
@@ -410,23 +296,11 @@ export default function Experience() {
     const ctx = gsap.context(() => {
       gsap.fromTo(headingRef.current.children,
         { opacity: 0, y: 32 },
-        {
-          opacity: 1, y: 0, duration: 0.9, stagger: 0.1, ease: 'power4.out',
-          scrollTrigger: { trigger: headingRef.current, start: 'top 82%' },
-        }
+        { opacity: 1, y: 0, duration: 0.9, stagger: 0.1, ease: 'power4.out', scrollTrigger: { trigger: headingRef.current, start: 'top 82%' } }
       )
       gsap.fromTo(lineRef.current,
         { scaleY: 0 },
-        {
-          scaleY: 1, ease: 'none',
-          transformOrigin: 'top center',
-          scrollTrigger: {
-            trigger: timelineRef.current,
-            start: 'top 68%',
-            end: 'bottom 18%',
-            scrub: 1.4,
-          },
-        }
+        { scaleY: 1, ease: 'none', transformOrigin: 'top center', scrollTrigger: { trigger: timelineRef.current, start: 'top 68%', end: 'bottom 18%', scrub: 1.4 } }
       )
     }, sectionRef)
     return () => ctx.revert()
@@ -435,91 +309,43 @@ export default function Experience() {
   return (
     <div ref={sectionRef} className="section-padding relative overflow-hidden" style={{ background: '#020208' }}>
       <style>{STYLES}</style>
-
-      {/* Ambient orbs */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         <div style={{ position:'absolute', top:'15%', right:'-5%', width:600, height:600, borderRadius:'50%', background:'radial-gradient(circle, rgba(255,193,7,0.06), transparent 70%)', filter:'blur(80px)' }}/>
         <div style={{ position:'absolute', bottom:'8%', left:'-5%', width:500, height:500, borderRadius:'50%', background:'radial-gradient(circle, rgba(0,240,255,0.05), transparent 70%)', filter:'blur(70px)' }}/>
       </div>
-
       <div className="container-custom relative z-10">
-
-        {/* Section label */}
         <div className="flex items-center gap-4 mb-16">
-          <span className="font-mono text-xs tracking-widest uppercase" style={{ color: '#ffc107', textShadow: '0 0 5px rgba(255,193,7,0.5)' }}>
-            03 / Experience
-          </span>
+          <span className="font-mono text-xs tracking-widest uppercase" style={{ color: '#ffc107', textShadow: '0 0 5px rgba(255,193,7,0.5)' }}>03 / Experience</span>
           <div className="flex-1 h-px" style={{ background: 'linear-gradient(90deg, rgba(255,193,7,0.5), transparent)' }} />
         </div>
-
-        {/* Heading */}
         <div ref={headingRef} style={{ marginBottom: '4rem' }}>
-          <h2 style={{
-            fontFamily: "'Space Grotesk', sans-serif", fontWeight: 800,
-            fontSize: 'clamp(2rem, 4vw, 3.5rem)', color: '#ffffff',
-            lineHeight: 1.15, marginBottom: '0.75rem',
-            textShadow: '0 5px 15px rgba(0,0,0,0.3)',
-          }}>
+          <h2 style={{ fontFamily: "'Space Grotesk', sans-serif", fontWeight: 800, fontSize: 'clamp(2rem, 4vw, 3.5rem)', color: '#ffffff', lineHeight: 1.15, marginBottom: '0.75rem', textShadow: '0 5px 15px rgba(0,0,0,0.3)' }}>
             Where I've{' '}
-            <span style={{
-              background: 'linear-gradient(135deg, #fff275, #ffc107, #ff9100)',
-              WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text',
-              filter: 'drop-shadow(0 2px 10px rgba(255,193,7,0.3))'
-            }}>
+            <span style={{ background: 'linear-gradient(135deg, #fff275, #ffc107, #ff9100)', WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent', backgroundClip: 'text', filter: 'drop-shadow(0 2px 10px rgba(255,193,7,0.3))' }}>
               Built Things
             </span>
           </h2>
-          <p style={{
-            fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem',
-            color: 'rgba(255,255,255,0.65)', maxWidth: '40rem', lineHeight: 1.7,
-          }}>
-            3+ years across product startups — from a Google Workspace-scale enterprise platform
-            to classified marketplaces and CRM dashboards handling 1,00,000+ records.
+          <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1.05rem', color: 'rgba(255,255,255,0.65)', maxWidth: '40rem', lineHeight: 1.7 }}>
+            3+ years across product startups — from a Google Workspace-scale enterprise platform to classified marketplaces and CRM dashboards handling 1,00,000+ records.
           </p>
         </div>
-
-        {/* Desktop alternating timeline */}
         <div ref={timelineRef} className="relative hidden md:block">
-          <div style={{
-            position: 'absolute', left: '50%', top: 0, bottom: 0,
-            width: 2, transform: 'translateX(-50%)',
-            background: 'rgba(255,255,255,0.05)', zIndex: 0,
-          }}>
-            <div ref={lineRef} style={{
-              position: 'absolute', inset: 0,
-              background: 'linear-gradient(to bottom, #ffc107 0%, #00f0ff 50%, #cc66ff 100%)',
-              boxShadow: '0 0 15px rgba(255,193,7,0.5)',
-              transformOrigin: 'top',
-            }}/>
+          <div style={{ position: 'absolute', left: '50%', top: 0, bottom: 0, width: 2, transform: 'translateX(-50%)', background: 'rgba(255,255,255,0.05)', zIndex: 0 }}>
+            <div ref={lineRef} style={{ position: 'absolute', inset: 0, background: 'linear-gradient(to bottom, #ffc107 0%, #00f0ff 50%, #cc66ff 100%)', boxShadow: '0 0 15px rgba(255,193,7,0.5)', transformOrigin: 'top' }}/>
           </div>
-
           {experiences.map((exp, i) => (
             <TimelineRow key={exp.id} exp={exp} index={i} />
           ))}
         </div>
-
-        {/* Mobile left-aligned timeline */}
         <div className="md:hidden relative" style={{ paddingLeft: 40 }}>
-          <div style={{
-            position: 'absolute', left: 16, top: 0, bottom: 0,
-            width: 2, background: 'rgba(255,255,255,0.05)',
-          }}/>
+          <div style={{ position: 'absolute', left: 16, top: 0, bottom: 0, width: 2, background: 'rgba(255,255,255,0.05)' }}/>
           {experiences.map((exp, i) => (
             <div key={exp.id} style={{ position: 'relative', marginBottom: 36 }}>
-              <div style={{
-                position: 'absolute', left: -32, top: 18,
-                width: 14, height: 14, borderRadius: '50%',
-                background: '#ffffff',
-                boxShadow: `0 0 15px 3px ${exp.accent}`,
-                border: `3px solid ${exp.accent}`,
-                animation: exp.current ? 'dotPulse 2.4s ease infinite' : 'none',
-              }}/>
+              <div style={{ position: 'absolute', left: -32, top: 18, width: 14, height: 14, borderRadius: '50%', background: '#ffffff', boxShadow: `0 0 15px 3px ${exp.accent}`, border: `3px solid ${exp.accent}`, animation: exp.current ? 'dotPulse 2.4s ease infinite' : 'none' }}/>
               <CardBody exp={exp} />
             </div>
           ))}
         </div>
-
-        {/* Bottom divider */}
         <div className="flex items-center justify-center gap-3 mt-10">
           <div className="h-px w-16" style={{ background: 'rgba(255,255,255,0.1)' }} />
           <span className="font-mono text-xs tracking-widest uppercase" style={{ color: 'rgba(255,255,255,0.4)' }}>
@@ -527,7 +353,6 @@ export default function Experience() {
           </span>
           <div className="h-px w-16" style={{ background: 'rgba(255,255,255,0.1)' }} />
         </div>
-
       </div>
     </div>
   )
