@@ -60,9 +60,9 @@ const IconArrow = () => (
 // ── Data ──────────────────────────────────────────────────────────────────────
 const highlights = [
   { label: 'Company', value: 'NDE · Now Digital Easy', Icon: IconBuilding },
-  { label: 'Role', value: 'Senior Frontend Developer', Icon: IconCode },
+  { label: 'Role', value: 'MERN Stack Developer', Icon: IconCode },
   { label: 'Location', value: 'Chennai, India · Remote', Icon: IconPin },
-  { label: 'Focus', value: 'React · TanStack · Performance', Icon: IconZap },
+  { label: 'Focus', value: 'React · Node.js · MongoDB', Icon: IconZap },
 ]
 
 const stats = [
@@ -342,7 +342,7 @@ export default function About() {
                 }}>
                   <div style={{ display: 'flex', alignItems: 'center', gap: 6 }}>
                     <span style={{ color: 'rgba(97,218,251,0.8)', display: 'flex' }}><IconCode /></span>
-                    <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 11, fontWeight: 600, color: 'rgba(97,218,251,0.8)', letterSpacing: '0.05em' }}>Frontend Dev</span>
+                    <span style={{ fontFamily: "'Space Grotesk', sans-serif", fontSize: 11, fontWeight: 600, color: 'rgba(97,218,251,0.8)', letterSpacing: '0.05em' }}>MERN Stack Dev</span>
                   </div>
                 </div>
 
@@ -434,7 +434,7 @@ export default function About() {
               fontSize: 'clamp(2rem, 3.5vw, 2.8rem)', color: '#e8e8f0',
               lineHeight: 1.15, marginBottom: '1.5rem',
             }}>
-              Frontend Developer{' '}
+              MERN Stack Developer{' '}
               <span style={{
                 background: 'linear-gradient(135deg, #ffd54f, #ffc107, #ff8f00)',
                 WebkitBackgroundClip: 'text', WebkitTextFillColor: 'transparent',
@@ -447,14 +447,14 @@ export default function About() {
             <div style={{ display: 'flex', flexDirection: 'column', gap: '1.1rem' }}>
 
               <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.58)' }}>
-                I am a Frontend Developer with
+                I am a MERN Stack Developer with
                 <span style={{ color: '#ffc107', fontWeight: 600 }}> 3+ years of production experience</span> building enterprise-grade React applications. Currently at NDE, I independently architected and owned the complete frontend of a
                 <span style={{ color: '#ffc107', fontWeight: 600 }}> Google Workspace-style platform</span> covering Drive, Docs, Mail, Meet, and CRM modules with 15GB unified storage.
               </p>
 
               <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.58)' }}>
                 My signature stack is
-                <span style={{ color: 'rgba(255,193,7,0.85)', fontWeight: 500 }}> React, Next.js, TanStack Query, TanStack Table, TanStack Virtual, Zustand, and shadcn/ui</span>. I focus on performance optimization, reusable component systems, and shipping clean maintainable UI at production quality.
+                <span style={{ color: 'rgba(255,193,7,0.85)', fontWeight: 500 }}> MongoDB, Express.js, React, Node.js, TanStack Query, TanStack Table, Zustand, and shadcn/ui</span>. I focus on performance optimization, reusable component systems, and shipping clean maintainable code at production quality.
               </p>
 
               <p style={{ fontFamily: "'DM Sans', sans-serif", fontSize: '1rem', lineHeight: 1.75, color: 'rgba(255,255,255,0.58)' }}>
@@ -473,9 +473,9 @@ export default function About() {
             {/* Tech tags */}
             <div ref={tagsRef} style={{ display: 'flex', flexWrap: 'wrap', gap: 8, marginTop: '1.8rem' }}>
               {[
-                'React', 'Next.js', 'TypeScript', 'TanStack Query',
-                'TanStack Table', 'TanStack Virtual', 'Zustand',
-                'shadcn/ui', 'Tailwind CSS', 'WebSocket', 'Yjs CRDT', 'Figma'
+                'MongoDB', 'Express.js', 'React', 'Node.js',
+                'Next.js', 'TypeScript', 'TanStack Query',
+                'TanStack Table', 'Zustand', 'REST API', 'WebSocket', 'Tailwind CSS'
               ].map(tag => (
                 <span key={tag} className="tag-pill">{tag}</span>
               ))}
@@ -504,7 +504,7 @@ export default function About() {
 
               <a
                 href={resume}
-                download="Muthu_Aravindh_React_Developer.pdf"
+                download="Muthu_Aravindh_MERN_Developer.pdf"
                 data-cursor-hover
                 style={{
                   display: 'inline-flex', alignItems: 'center', gap: 7,

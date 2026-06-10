@@ -37,16 +37,12 @@ const projects = [
     tech: ['React', 'Lexical', 'Yjs CRDT', 'WebSocket', 'Material UI'],
     gradient: 'linear-gradient(135deg, #f7971e 0%, #ffd200 100%)',
     accent: '#ffd200',
-    github: null,
-    live: null,
-    featured: true,
-    label: 'Production · Docs Module',
   },
   {
     title: 'Chatty — Real-Time Chat App',
     description:
       'Full-stack MERN chat app with MVC-structured Express backend. JWT authentication stored in httpOnly cookies with bcrypt (salt round 10). Socket.io real-time layer with dual-key Map room management, message delivery status (sent to delivered to read), typing indicators, online/offline presence and Cloudinary image uploads.',
-    tech: ['React', 'Node.js', 'Express', 'MongoDB', 'Socket.io', 'JWT', 'bcrypt', 'Cloudinary', 'Tailwind CSS'],
+    tech: ['React', 'Tailwind CSS', 'DaisyUI', 'Node.js', 'Express', 'MongoDB', 'Socket.io', 'JWT', 'bcrypt', 'Cloudinary'],
     gradient: 'linear-gradient(135deg, #4facfe 0%, #00f2fe 100%)',
     accent: '#4facfe',
     github: 'https://github.com/Aravindh2501/Chatty-chat',
@@ -71,8 +67,8 @@ const projects = [
     description:
       'Internal React package for previewing PDF, image, Excel and video files. Uses SheetJS to parse Excel files client-side and renders data in a virtualized grid with TanStack Virtual handling 1,00,000+ rows without browser freeze. Includes annotation and draw mode with a Zustand-backed comment drawer.',
     tech: ['React', 'TypeScript', 'Zustand', 'PDF.js', 'SheetJS', 'TanStack Virtual'],
-    gradient: 'linear-gradient(135deg, #f7971e 0%, #ffd200 100%)',
-    accent: '#f7971e',
+    gradient: 'linear-gradient(135deg, #11998e 0%, #38ef7d 100%)',
+    accent: '#38ef7d',
     github: null,
     live: null,
     featured: false,

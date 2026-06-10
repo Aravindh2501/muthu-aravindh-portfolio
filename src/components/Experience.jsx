@@ -65,10 +65,10 @@ const experiences = [
     summary:
       'Joined as the first frontend developer and set up the entire codebase from scratch including component structure, folder organization and coding conventions.',
     bullets: [
+      'Joined as the first frontend developer and set up the entire codebase from scratch including component structure, folder organization and coding conventions.',
       'Built a real-time chat UI using React and Socket.io-client with room-based messaging, typing indicators and online presence tracking without page refresh.',
       'Built an internal HRMS with attendance tracking, payslip generation with PDF export and role-based access control for Admin, Manager and Employee roles.',
-      'Built a classifieds marketplace UI using Material UI and TanStack Query for server state, caching and background sync, reducing redundant network calls.',
-      'Used Redux Toolkit for global state management and TanStack Query for server-state caching and background sync to reduce redundant API calls.',
+      'Built a classifieds marketplace UI using Material UI and TanStack Query for server state caching and background sync, and managed global state using Redux Toolkit with normalized data structures.',
     ],
     stack: [
       'React', 'Socket.io-client', 'TanStack Query', 'Redux Toolkit',
