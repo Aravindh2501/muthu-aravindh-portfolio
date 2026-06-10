@@ -6,10 +6,10 @@ export const PERSONAL = {
   firstName: "Muthu",
   lastName: "Aravindh",
 
-  role: "Frontend Developer (React) ",
+  role: "Mern Stack Developer",
 
   tagline:
-    "Frontend Developer with 3+ years of experience building scalable and responsive web applications using React, TypeScript, and modern UI technologies.",
+    "Mern Stack Developer with 3+ years of experience building scalable and responsive web applications using React, TypeScript, Next and modern UI technologies.",
 
   location: "Chennai, India",
 
